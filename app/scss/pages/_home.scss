@@ -1,0 +1,796 @@
+.home-banner {
+  @include bg(cover, no-repeat, center);
+  @include size(100%, 80vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  @include respond-to(wecan) {
+    height: 86vh;
+  }
+
+  @include respond-to(md) {
+    height: 55vw;
+  }
+
+  &::before {
+    @include pseudo();
+    @include size(100%);
+    background-color: rgba($black, 0.35);
+    z-index: 1;
+  }
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1,
+  h2 {
+    color: $white;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: $titleDecorative;
+    margin-bottom: 15px;
+    margin-top: 60px;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @include respond-to(sm) {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: $title;
+
+    @include respond-to(xs) {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    @include respond-to(sm) {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    @include respond-to(md) {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  .banner-arrow-down {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+
+    @include respond-to(wecan) {
+      bottom: 40px;
+    }
+
+    @include respond-to(xl) {
+      bottom: 20px;
+    }
+
+    h5 {
+      color: $white;
+      font-weight: 400;
+      font-size: $textSize;
+      margin-bottom: 9px;
+    }
+
+    img {
+      @include size(40px);
+    }
+  }
+
+  .banner-video-controls {
+    position: absolute;
+    bottom: 40px;
+    left: 56px;
+    z-index: 1;
+
+    img {
+      @include size(32px);
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.home-map {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 80px 130px 95px 130px;
+
+  @include respond-to(xs) {
+    padding: 50px 20px;
+    grid-template-columns: 100%;
+    gap: 15px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 50px 20px;
+    grid-template-columns: 100%;
+    gap: 15px 0;
+  }
+
+  @include respond-to(md) {
+    padding: 50px 20px;
+    grid-template-columns: 100%;
+    gap: 30px 0;
+  }
+
+  @include respond-to(md) {
+    padding: 60px 80px;
+  }
+
+  &-text {
+    padding-top: 30px;
+
+    h3 {
+      color: $secondary;
+      font-family: $titleDecorative;
+      font-size: 48px;
+      line-height: 46px;
+
+      @include respond-to(xs) {
+        font-size: 38px;
+        line-height: 30px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 38px;
+        line-height: 30px;
+      }
+
+      @include respond-to(md) {
+        font-size: 40px;
+        line-height: 32px;
+      }
+
+      @include respond-to(xs) {
+        font-size: 38px;
+        line-height: 30px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 38px;
+        line-height: 30px;
+      }
+
+      @include respond-to(md) {
+        font-size: 40px;
+        line-height: 32px;
+      }
+
+      span {
+        font-family: $text;
+        color: $primary;
+        font-size: 24px;
+        font-weight: 500;
+
+        @include respond-to(xs) {
+          font-size: $textSize;
+          line-height: 12px;
+        }
+
+        @include respond-to(sm) {
+          font-size: $textSize;
+          line-height: 12px;
+        }
+
+        @include respond-to(md) {
+          font-size: 22px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    p {
+      font-size: $textSize;
+      color: $textColor;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-right: 10px;
+      line-height: 25px;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 15px;
+      }
+
+      @include respond-to(md) {
+        font-size: 18px;
+      }
+    }
+
+    .btn-custom {
+      margin-top: 12px;
+      padding: 15px 18px;
+    }
+  }
+
+  &-image {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 98%;
+    }
+  }
+}
+
+.home-banner-villas {
+  @include size(100%, 400px);
+  @include bg(cover, no-repeat, center);
+  background-image: url("../img/backgrounds/cta_1.jpg");
+  position: relative;
+
+  &::before {
+    @include pseudo();
+    @include size(100%);
+    left: 0;
+    background-color: rgba($black, 0.35);
+  }
+
+  .home-banner-villas-text {
+    position: absolute;
+    right: 132px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+
+    @include respond-to(xs) {
+      right: 20px;
+    }
+
+    @include respond-to(sm) {
+      right: 20px;
+    }
+
+    @include respond-to(md) {
+      right: 40px;
+    }
+  }
+
+  h2 {
+    font-size: 60px;
+    font-family: $titleDecorative;
+    color: $white;
+    font-weight: 400;
+
+    &:first-child {
+      margin-top: -20px;
+      margin-bottom: 16px;
+    }
+
+    @include respond-to(xs) {
+      font-size: 40px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 40px;
+    }
+  }
+
+  .btn-custom {
+    margin-top: 15px;
+    padding: 16px 18px;
+  }
+}
+
+.home-banner-contact {
+  @include size(100%, 305px);
+  @include bg(cover, no-repeat, center);
+  background-image: url("../img/backgrounds/cta_3.jpg");
+  position: relative;
+  margin-bottom: 80px;
+
+  &::before {
+    @include pseudo();
+    @include size(100%);
+    left: 0;
+    background-color: rgba($black, 0.35);
+  }
+
+  .home-banner-contact-text {
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+
+    @include respond-to(xs) {
+      left: 20px;
+    }
+
+    @include respond-to(sm) {
+      left: 20px;
+    }
+
+    @include respond-to(md) {
+      left: 40px;
+    }
+  }
+
+  h2 {
+    font-size: 60px;
+    font-family: $titleDecorative;
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 32px;
+
+    @include respond-to(xs) {
+      font-size: 40px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 40px;
+    }
+  }
+}
+
+.home-featured {
+  padding: 80px 120px;
+
+  @include respond-to(xs) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 60px 20px;
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 33.333%);
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &-card {
+    margin: 0 11px;
+    transition: all ease-in-out 0.3s;
+    height: 400px;
+
+    &:hover {
+      transform: translateY(-16px);
+      transition: all ease-in-out 0.3s;
+    }
+
+    &-title {
+      padding: 24px 12px;
+      background-color: $white;
+      height: 21%;
+
+      @include respond-to(md) {
+        padding: 24px 0;
+      }
+
+      h3 {
+        font-family: $titleDecorative;
+        font-size: 36px;
+        text-align: center;
+        color: $textColor;
+
+        @include respond-to(xs) {
+          font-size: 25px;
+        }
+
+        @include respond-to(sm) {
+          font-size: 25px;
+        }
+
+        @include respond-to(md) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &-img {
+      height: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      padding: 24px;
+      height: 28%;
+      display: flex;
+      align-items: center;
+
+      @include respond-to(xs) {
+        padding: 15px;
+      }
+
+      @include respond-to(sm) {
+        padding: 15px;
+      }
+
+      @include respond-to(md) {
+        padding: 20px 10px;
+      }
+
+      p {
+        color: #31373d;
+        font-size: 18px;
+        letter-spacing: 0;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 0;
+
+        @include respond-to(xs) {
+          font-size: 15px;
+        }
+
+        @include respond-to(sm) {
+          font-size: 15px;
+        }
+
+        @include respond-to(md) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &.green {
+      .home-featured-card-text {
+        background-color: $green;
+      }
+
+      &:hover .home-featured-card-title h3 {
+        color: $green;
+      }
+    }
+
+    &.blue {
+      .home-featured-card-text {
+        background-color: $primary;
+      }
+
+      &:hover .home-featured-card-title h3 {
+        color: $primary;
+      }
+    }
+
+    &.orange {
+      .home-featured-card-text {
+        background-color: $orange;
+      }
+
+      &:hover .home-featured-card-title h3 {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.home-about {
+  padding: 0 120px;
+
+  @include respond-to(xs) {
+    padding: 0 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 0 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 0 20px;
+  }
+
+  &-card {
+    background-color: $white;
+    box-shadow: $shadow;
+    padding: 40px;
+    display: flex;
+
+    @include respond-to(xs) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    &-img {
+      width: 50%;
+      position: relative;
+
+      @include respond-to(xs) {
+        width: 100%;
+      }
+
+      @include respond-to(sm) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        
+        @include respond-to(md) {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      img.play {
+        position: absolute;
+        @include size(60px, 69px);
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        cursor: pointer;
+      }
+    }
+
+    &-text {
+      width: 50%;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond-to(xs) {
+        width: 100%;
+        padding: 12px 0;
+
+        .btn-custom {
+          width: 100%;
+        }
+      }
+
+      @include respond-to(sm) {
+        width: 100%;
+        padding: 12px 0;
+
+        .btn-custom {
+          width: 100%;
+        }
+      }
+
+      h4 {
+        font-family: $title;
+        color: $secondary;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: $textColor;
+        font-size: $textSize;
+        font-weight: 400;
+        margin-bottom: 24px;
+
+        @include respond-to(xs) {
+          font-size: 16px;
+        }
+
+        @include respond-to(sm) {
+          font-size: 16px;
+        }
+
+        @include respond-to(md) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.home-blog {
+  padding: 80px 120px;
+
+  @include respond-to(xs) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 50px 20px;
+  }
+
+  &-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.home-blog-card {
+  background-color: $white;
+  box-shadow: $shadow;
+  margin: 12px;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    transition: all ease-in-out 0.3s;
+    transform: translateY(-16px);
+
+    .home-blog-card-date {
+      background-color: rgba($secondary, 0.7);
+
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &.two-columns {
+    width: calc(50% - 24px);
+
+    @include respond-to(xs) {
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    @include respond-to(sm) {
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    .home-blog-card-text h4 {
+      font-size: $textSize;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 15px;
+      }
+
+      @include respond-to(md) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &.three-columns {
+    width: calc(33.333% - 24px);
+
+    @include respond-to(xs) {
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    @include respond-to(sm) {
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    .home-blog-card-text h4 {
+      font-size: 18px;
+
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 15px;
+      }
+
+      @include respond-to(md) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &-img {
+    position: relative;
+
+    .home-blog-card-date {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+      background-color: rgba($white, 0.6);
+      border-radius: 4px;
+      padding: 6px 12px;
+
+      span {
+        color: $secondary;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    color: $textColor;
+    padding: 24px 40px;
+
+    @include respond-to(xs) {
+      padding: 12px 20px;
+    }
+
+    @include respond-to(sm) {
+      padding: 12px 20px;
+    }
+
+    @include respond-to(md) {
+      padding: 12px 20px;
+    }
+
+    h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+
+      @include respond-to(xs) {
+        margin-bottom: 5px;
+      }
+
+      @include respond-to(sm) {
+        margin-bottom: 5px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
+
+      @include respond-to(xs) {
+        font-size: 13px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 13px;
+      }
+
+      @include respond-to(md) {
+        font-size: 13px;
+      }
+    }
+  }
+}

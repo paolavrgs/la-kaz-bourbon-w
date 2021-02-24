@@ -1,0 +1,23 @@
+.page-contact
+  .contact-card
+    .contact-card-header
+      %h4 Want a personalized service? Send us a message!
+      %p Leave your name and email and we will contact you about all your inquiries.
+    .contact-card-form
+      %form
+        .form-row
+          .form-floating
+            %input.form-control{ id: "name", placeholder: "Name", type: "text" }
+            %label{for: "name"} Name
+          .form-floating
+            %input.form-control{ id: "email", placeholder: "Email", type: "email" }
+            %label{for: "email"} Email
+          .form-floating
+            %input.form-control{ id: "arrivalDate", placeholder: "Date of arrival", type: "date" }
+            %label{for: "arrivalDate"} Date of arrival
+        .form-row
+          .form-floating
+            %textarea.form-control{ id: "comments", placeholder: "How can we help you?" }
+            %label{for: "comments"} How can we help you?
+        .form-submit
+          %input.btn.btn-custom.inverse{ type: "submit", value: "Send" }

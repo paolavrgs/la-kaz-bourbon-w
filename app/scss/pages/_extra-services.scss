@@ -1,0 +1,116 @@
+.extra-services {
+  padding: 64px 130px;
+
+  @include respond-to(xs) {
+    padding: 40px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 50px 80px;
+  }
+
+  @include respond-to(lg) {
+    padding: 50px 80px;
+  }
+
+  p {
+    text-align: center;
+    color: $textColor;
+    margin-bottom: 80px;
+    font-size: $textSize;
+    line-height: 25px;
+    padding: 0 10px;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+  
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+
+  &-grid {
+    $gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.333% - #{$gap}));
+    gap: 40px $gap;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+      gap: 40px 0;
+    }
+  
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+      gap: 40px 0;
+    }
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, calc(50% - #{$gap}));
+    }
+  }
+
+  .extra-service-item {
+    box-shadow: $shadow;
+
+    img {
+      width: 100%;
+    }
+
+    &-text {
+      padding: 32px 35px 46px 35px;
+      text-align: center;
+
+      @include respond-to(xs) {
+        padding: 32px 20px;
+      }
+    
+      @include respond-to(sm) {
+        padding: 32px 20px;
+      }
+
+      @include respond-to(md) {
+        padding: 32px 25px;
+      }
+
+      @include respond-to(lg) {
+        padding: 32px 25px;
+      }
+
+      h3 {
+        font-family: $titleDecorative;
+        font-size: 26px;
+        color: $secondary;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: $textColor;
+        margin-bottom: 0;
+        font-size: $textSize;
+        margin-top: 0;
+
+        @include respond-to(xs) {
+          font-size: $textMobileSize;
+        }
+      
+        @include respond-to(sm) {
+          font-size: $textMobileSize;
+        }
+
+        @include respond-to(md) {
+          font-size: $textTabletSize;
+        }
+      }
+    }
+  }
+}

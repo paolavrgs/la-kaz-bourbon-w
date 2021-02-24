@@ -1,0 +1,164 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Vacation villas in La Reunion, France | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .product.green
+      .product-images
+        .product-images-slider
+          .product-image-item
+            %img{ src: "assets/img/villas_1.jpg" }
+          .product-image-item
+            %img{ src: "assets/img/villas_2.jpg" }
+          .product-image-item
+            %img{ src: "assets/img/villas_3.jpg" }
+      .product-detail
+        %h1
+          La Garconniere
+          %br
+          %span Saint Pierre
+        .product-description
+          %p Perched on the shore of the Plage des Aigrettes with an uninterrupted view of the Indian Ocean, this traditional beach house is replete with tropical splendor. Surrounded by a tropical garden, the property includes a swimming pool, an outdoor shower, and direct access to the beach. The terrace provides the perfect spot to kick back and do some whale watching or marvel at the spectacular tropical sunsets.
+          %img{ src: "assets/img/la-garconniere-map.png" }
+      .product-features
+        .product-features-left
+          .product-features-list
+            %h5 Things to do around the villa
+            %ul
+              %li
+                %img{ src: "assets/img/icons/activities/village.svg" }
+                Go “local” a short 10-minute walk away in the village of Boucan Canot, where you’ll find plenty of restaurants and bars to explore.
+              %li
+                %img{ src: "assets/img/icons/activities/fruits.svg" }
+                Need to stock up on supplies or snacks?
+                %br
+                Take a quick 2-minute drive to the supermarket or stop by one of several roadside fruit and vegetable stands.
+              %li
+                %img{ src: "assets/img/icons/activities/surfing.svg" }
+                Need more? Check out the surf breaks at the nearby Plage des Brisants or drive 10 minutes to the lively bars and restaurants surrounding the Plage des Roches Noires.
+          .product-services
+            %h5 Services
+            .product-services-grid
+              .product-service-item
+                %img{ src: "assets/img/icons/services/beach.svg" }
+                %span Sea view
+              .product-service-item
+                %img{ src: "assets/img/icons/services/bedroom.svg" }
+                %span Bedroom*
+              .product-service-item
+                %img{ src: "assets/img/icons/services/safe.svg" }
+                %span Safety & Security
+              .product-service-item
+                %img{ src: "assets/img/icons/services/towel.svg" }
+                %span Room Amenities
+              .product-service-item
+                %img{ src: "assets/img/icons/services/computer.svg" }
+                %span Media & Technology
+              .product-service-item
+                %img{ src: "assets/img/icons/services/wifi.svg" }
+                %span Internet
+        .product-features-right
+          .product-check.sticky-top
+            .product-check-card
+              .price
+                $400
+                %span / night
+              .book-form
+                %form
+                  .row
+                    .col-lg-6
+                      .input-group
+                        %input.form-control{"aria-label" => "Arrival", placeholder: "Arrival", type: "text", onfocus:"(this.type='date')"}
+                        %span.input-group-text
+                          %img{ src: "assets/img/icons/home-icon.svg" }
+                    .col-lg-6
+                      .input-group
+                        %input.form-control{"aria-label" => "Departure", placeholder: "Departure", type: "text", onfocus:"(this.type='date')"}
+                        %span.input-group-text
+                          %img{ src: "assets/img/icons/home-icon.svg" }
+                    .col-lg-12
+                      %select.form-select
+                        %option{selected: "selected", disabled: true} Guests
+                        %option{value: "1"} One
+                        %option{value: "2"} Two
+                        %option{value: "3"} Three
+                %input.btn.btn-custom{ type: "submit", value: "Check availability" }
+              .book-prices
+                %dl
+                  %dt $400 x 2 nights
+                  %dd $800
+                  %dt Service tax
+                  %dd $80
+              .book-total
+                %dl
+                  %dt Total
+                  %dd $880
+    = render('app/partials/_contact-form.haml')
+    .villa-related
+      .section-title
+        %h1 Whats around?
+      %ul.nav.nav-tabs{role: "tablist"}
+        %li.nav-item{role: "presentation"}
+          %button.nav-link.active{id: "nearby-tab", "aria-controls" => "nearby", "aria-selected" => "true", "data-bs-target" => "#nearby", "data-bs-toggle" => "tab", role: "tab", type: "button"} Nearby Interests
+        %li.nav-item{role: "presentation"}
+          %button.nav-link{id: "restaurants-tab", "aria-controls" => "restaurants", "aria-selected" => "false", "data-bs-target" => "#restaurants", "data-bs-toggle" => "tab", role: "tab", type: "button"} Restaurants & Markets
+        %li.nav-item{role: "presentation"}
+          %button.nav-link{id: "attractions-tab", "aria-controls" => "attractions", "aria-selected" => "false", "data-bs-target" => "#attractions", "data-bs-toggle" => "tab", role: "tab", type: "button"} Natural Attractions
+        %li.nav-item{role: "presentation"}
+          %button.nav-link{id: "airports-tab", "aria-controls" => "airports", "aria-selected" => "false", "data-bs-target" => "#airports", "data-bs-toggle" => "tab", role: "tab", type: "button"} Airports
+      .tab-content
+        .tab-pane.fade.show.active{id: "nearby", "aria-labelledby" => "nearby-tab", role: "tabpanel"}
+          .related-grid
+            - 8.times do
+              .related-item
+                %img{ src: "assets/img/related_product.jpg" }
+                .related-item-text
+                  %h4 Temple Tamoul Narassingua Perournal
+                  .related-km
+                    %span 6.6 km
+                    %img{ src: "assets/img/icons/shape.svg" }
+          %nav
+            %ul.pagination.justify-content-center
+              %li.page-item.active
+                %a.page-link{href: "#"} 1
+              %li.page-item
+                %a.page-link{href: "#"} 2
+        .tab-pane.fade{id: "restaurants", "aria-labelledby" => "restaurants-tab", role: "tabpanel"}
+          .related-grid
+            - 8.times do
+              .related-item
+                %img{ src: "assets/img/related_product.jpg" }
+                .related-item-text
+                  %h4 Temple Tamoul Narassingua Perournal
+                  .related-km
+                    %span 6.6 km
+                    %img{ src: "assets/img/icons/shape.svg" }
+        .tab-pane.fade{id: "attractions", "aria-labelledby" => "attractions-tab", role: "tabpanel"}
+          .related-grid
+            - 8.times do
+              .related-item
+                %img{ src: "assets/img/related_product.jpg" }
+                .related-item-text
+                  %h4 Temple Tamoul Narassingua Perournal
+                  .related-km
+                    %span 6.6 km
+                    %img{ src: "assets/img/icons/shape.svg" }
+        .tab-pane.fade{id: "airports", "aria-labelledby" => "airports-tab", role: "tabpanel"}
+          .related-grid
+            - 8.times do
+              .related-item
+                %img{ src: "assets/img/related_product.jpg" }
+                .related-item-text
+                  %h4 Temple Tamoul Narassingua Perournal
+                  .related-km
+                    %span 6.6 km
+                    %img{ src: "assets/img/icons/shape.svg" }
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

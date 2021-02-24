@@ -1,0 +1,687 @@
+body {
+  font-family: $text;
+}
+
+// SECTION TITLE
+.section-title {
+  text-align: center;
+
+  h1 {
+    font-family: $titleDecorative;
+    color: $secondary;
+    font-size: 60px;
+    margin-bottom: 15px;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 30px;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    font-size: $textSize;
+    color: $textColor;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+
+  margin-bottom: 56px;
+}
+
+// BUTTONS
+.btn-custom {
+  background-color: $primary;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 18px;
+  border-radius: 0;
+  width: 252px;
+
+  &.inverse {
+    background-color: $white;
+    color: $primary;
+    border: 3px solid $primary;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $white;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.dropdown-toggle {
+  position: relative;
+
+  &::after {
+    border: 0;
+    background-image: url("../img/icons/arrow.svg");
+    @include size(14px, 8px);
+    @include bg(contain, no-repeat, center);
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin-left: 12px;
+  }
+}
+
+// NAVIGATION BAR
+.navbar {
+  height: 124px;
+  padding: 0 160px;
+  z-index: 2;
+  justify-content: center;
+
+  @include respond-to(xs) {
+    height: auto;
+    padding: 0px;
+    box-shadow: $shadow;
+  }
+
+  @include respond-to(sm) {
+    height: auto;
+    padding: 0px;
+    box-shadow: $shadow;
+  }
+
+  @include respond-to(md) {
+    height: auto;
+    padding: 0 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1199px) and (max-width: 1355px) {
+    padding: 0 70px;
+  }
+
+  .nav-item {
+    margin: 0 15px;
+
+    &.dropdown {
+      margin-right: 40px;
+    }
+
+    &.languages {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      select {
+        padding: 10px;
+        border: 1px solid $secondary;
+        background-color: $white;
+        color: $secondary;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:focus,
+        &:hover,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    color: $secondary;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
+
+.navbar-toggler {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.navbar-brand {
+  display: inline-block;
+  margin-right: 0;
+  margin: 0 40px;
+
+  @include respond-to(lg) {
+    margin: 0;
+  }
+
+  @include respond-to(sm) {
+    margin: 0;
+  }
+
+  @include respond-to(xs) {
+    margin: 0;
+  }
+
+  img {
+    @include size(321px, 136px);
+    object-fit: contain;
+    margin-top: 30px;
+
+    @include respond-to(xs) {
+      margin-top: 0;
+      @include size(150px, auto);
+    }
+
+    @include respond-to(sm) {
+      margin-top: 0;
+      @include size(150px, auto);
+    }
+
+    @include respond-to(md) {
+      margin-top: 0;
+      @include size(200px, auto);
+    }
+
+    @include respond-to(lg) {
+      @include size(280px, auto);
+    }
+  }
+}
+
+.widget {
+  z-index: 2;
+  background-color: $white;
+  padding: 10px 12px;
+  width: 60vw;
+  margin-top: 65px;
+
+  @include respond-to(xs) {
+    width: 80vw;
+  }
+
+  @include respond-to(sm) {
+    width: 80vw;
+  }
+
+  @include respond-to(md) {
+    width: 80vw;
+  }
+
+  @include respond-to(xl) {
+    margin-top: 40px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-to(xs) {
+      flex-direction: column;
+    }
+
+    @include respond-to(sm) {
+      flex-direction: column;
+    }
+
+    .input-group {
+      width: 33.333%;
+      margin-right: 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      .btn-custom {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-select,
+  .form-control {
+    border: 0;
+    color: #a8a8a8;
+    font-size: 18px;
+    font-weight: 500;
+
+    &::placeholder {
+      color: #a8a8a8;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  input[type="date"] {
+    border-right: 1px solid #a8a8a8;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+  }
+
+  .input-group-text {
+    background-color: $white;
+    border: 0;
+  }
+}
+
+// FOOTER
+footer {
+  background-image: url("../img/backgrounds/footer_bg.png");
+  @include bg(cover, no-repeat, center);
+  padding: 40px 120px 105px 120px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include respond-to(xs) {
+    padding: 40px 20px 105px 20px;
+    flex-direction: column;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px 105px 20px;
+    flex-direction: column;
+  }
+
+  @include respond-to(md) {
+    padding: 40px 20px 105px 20px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 12px 0;
+    color: $secondary;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  li a {
+    color: $secondary;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      color: $secondary;
+      font-size: 14px;
+
+      a {
+        color: rgba(64, 64, 64, 0.36);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      color: $secondary;
+      font-size: 14px;
+
+      a {
+        color: rgba(64, 64, 64, 0.36);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-logo {
+  width: 33.333%;
+
+  @include respond-to(xs) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include respond-to(sm) {
+    width: 100%;
+    text-align: center;
+  }
+
+  img {
+    height: 206px;
+  }
+}
+
+.footer-menu {
+  width: 33.333%;
+
+  @include respond-to(xs) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include respond-to(sm) {
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+}
+
+.footer-contact {
+  width: 33.333%;
+
+  @include respond-to(xs) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include respond-to(sm) {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rrss {
+    display: inline-flex;
+
+    li {
+      margin-right: 16px;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+dt {
+  float: left;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: $textColor;
+
+  @include respond-to(xs) {
+    font-size: $textMobileSize;
+  }
+
+  @include respond-to(sm) {
+    font-size: $textMobileSize;
+  }
+
+  @include respond-to(md) {
+    font-size: $textMobileSize;
+  }
+}
+
+dd {
+  float: left;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
+  color: $textColor;
+
+  @include respond-to(xs) {
+    font-size: $textMobileSize;
+  }
+
+  @include respond-to(sm) {
+    font-size: $textMobileSize;
+  }
+
+  @include respond-to(md) {
+    font-size: $textMobileSize;
+  }
+}
+
+.page-contact {
+  padding: 40px 120px;
+
+  @include respond-to(xs) {
+    padding: 40px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 40px 80px;
+  }
+
+  @include respond-to(lg) {
+    padding: 40px 80px;
+  }
+}
+
+.contact-card {
+  box-shadow: $shadow;
+  background-color: $white;
+  padding: 40px;
+
+  @include respond-to(xs) {
+    padding: 40px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px;
+  }
+
+  &-header {
+    text-align: center;
+
+    h4 {
+      font-family: $title;
+      font-size: 24px;
+      font-weight: 700;
+      color: $secondary;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: $textSize;
+      font-weight: 400;
+      color: $textColor;
+      margin-bottom: 0;
+
+      @include respond-to(xs) {
+        font-size: $textMobileSize;
+      }
+
+      @include respond-to(sm) {
+        font-size: $textMobileSize;
+      }
+
+      @include respond-to(md) {
+        font-size: $textTabletSize;
+      }
+    }
+  }
+
+  &-form {
+    padding-top: 24px;
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      @include respond-to(xs) {
+        flex-wrap: wrap;
+      }
+    
+      @include respond-to(sm) {
+        flex-wrap: wrap;
+      }
+
+      .form-floating {
+        width: 33.333%;
+        margin: 0 6px;
+
+        @include respond-to(xs) {
+          width: 100%;
+        }
+      
+        @include respond-to(sm) {
+          width: 100%;
+        }
+
+        &:only-child {
+          width: 100%;
+        }
+
+        label {
+          color: #a8a8a8;
+        }
+
+        input,
+        textarea {
+          border: 0;
+          border-bottom: 1px solid #a8a8a8;
+          color: #a8a8a8;
+          border-radius: 0;
+          resize: none;
+
+          &:focus,
+          &:active {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .form-submit {
+      text-align: center;
+
+      .btn-custom {
+        margin: 32px auto 0 auto;
+
+        @include respond-to(xs) {
+          width: 100%;
+        }
+      
+        @include respond-to(sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// PAGINATION
+.pagination {
+  margin-top: 40px;
+}
+
+.page-item {
+  margin: 0 5px;
+
+  &.active {
+    .page-link {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .page-link {
+    border: 0;
+    @include size(50px);
+    @include flexcenter();
+    box-shadow: $shadow;
+    font-weight: 700;
+    font-family: $text;
+    font-size: $textSize;
+    color: $secondary;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+  }
+
+  &:first-child {
+    .page-link {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &:last-child {
+    .page-link {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

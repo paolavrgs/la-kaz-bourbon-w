@@ -1,0 +1,23 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Página no encontrada | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    %section.not-found
+      .not-found-message
+        %h3 LO SENTIMOS
+        %span No podemos encontrar la página que está buscando
+      .not-found-code
+        %h1 404
+      .not-found-message
+        %h3 Te llevaremos de vuelta
+      %a.btn.btn-custom.btn-shadow{ href: "/" } Volver al inicio
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

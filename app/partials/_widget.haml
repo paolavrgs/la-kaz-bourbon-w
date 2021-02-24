@@ -1,0 +1,16 @@
+.widget
+  %form
+    .input-group
+      %span.input-group-text
+        %img{ src: "assets/img/icons/home-icon.svg" }
+      %input.form-control{"aria-label" => "Arrival date", placeholder: "Arrival date", type: "date"}
+    .input-group
+      %label.input-group-text
+        %img{ src: "assets/img/icons/calendar-icon.svg" }
+      %select.form-select
+        %option{selected: "selected", disabled: true} Guests
+        %option{value: "1"} One
+        %option{value: "2"} Two
+        %option{value: "3"} Three
+    .input-group
+      %input.btn.btn-custom{ type: "submit", value: "View villas" }

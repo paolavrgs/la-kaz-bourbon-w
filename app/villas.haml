@@ -1,0 +1,199 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Vacation villas in La Reunion, France | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .villas-page-header
+      %h1 Vacation Villas in la Reunion, france
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio. Vivamus euismod vulputate metus in mattis. Fusce eget pretium nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    .villas-container
+      .villas-filters
+        .filter-card
+          .input-group.mt-0
+            %input.form-control{ placeholder: "Search by name", type: "search" }
+            %span.input-group-text
+              %img{ src: "assets/img/icons/search-icon.svg" }
+          .filter-item
+            %h5 Filter
+            .input-group
+              %input.form-control{"aria-label" => "Arrival date", placeholder: "Arrival date", type: "date"}
+              %span.input-group-text
+                %img{ src: "assets/img/icons/home-icon.svg" }
+            %select.form-select
+              %option{selected: "selected", disabled: true} Guests
+              %option{value: "1"} One
+              %option{value: "2"} Two
+              %option{value: "3"} Three
+            %select.form-select
+              %option{selected: "selected", disabled: true} Bedrooms
+              %option{value: "1"} One
+              %option{value: "2"} Two
+              %option{value: "3"} Three
+            %select.form-select
+              %option{selected: "selected", disabled: true} Region
+              %option{value: "1"} One
+              %option{value: "2"} Two
+              %option{value: "3"} Three
+          .filter-item
+            %h5 Price (night)
+            %input.form-range{max: "2000", min: "0", step: "10", value: "400", type: "range", id: "priceRange"}
+            .selected-range
+              %span $
+          .filter-item
+            %h5 Location
+            .filter-checkboxes
+              .form-check
+                %input.form-check-input{type: "checkbox", value: ""}
+                %label.form-check-label
+                  On the coast
+                  %span (3)
+              .form-check
+                %input.form-check-input{type: "checkbox", value: ""}
+                %label.form-check-label
+                  Sea view
+                  %span (3)
+              .form-check
+                %input.form-check-input{type: "checkbox", value: ""}
+                %label.form-check-label
+                  Countryside
+                  %span (0)
+              .form-check
+                %input.form-check-input{type: "checkbox", value: ""}
+                %label.form-check-label
+                  Near Village
+                  %span (1)
+      .villas-results
+        .results-header
+          %span 3 villas found
+          .sort-filter Sort by: Popularity
+        .results-list
+          .result-item.green
+            .result-item-right
+              %h2
+                La Garconniere
+                %span Saint Pierre
+              .result-item-images
+                %img.image-1{ src: "assets/img/villas_1.jpg" }
+                %img.image-2{ src: "assets/img/villas_2.jpg" }
+                %img.image-3{ src: "assets/img/villas_3.jpg" }
+              .result-item-description
+                %p Perched on the shore of the Plage des Aigrettes with an uninterrupted view of the Indian Ocean, this traditional beach house is replete with tropical splendor. 
+            .result-item-left
+              .result-item-info
+                %ul.item-info-features
+                  %li
+                    %img{ src: "assets/img/icons/guests.svg" }
+                    %span 10
+                  %li
+                    %img{ src: "assets/img/icons/beds.svg" }
+                    %span 4
+                  %li
+                    %img{ src: "assets/img/icons/baths.svg" }
+                    %span 2
+                .item-info-ranking
+                  %h4
+                    Fantastic
+                    %br/
+                    %span 12 comments
+                  .ranking-number
+                    %span 9.6
+                .item-info-prices
+                  %dl
+                    %dt Low Season
+                    %dd $400 p.n
+                    %dt High Season
+                    %dd $800 p.n
+                %a.btn.btn-custom{ href: "villa-detail.html" } Read more
+          .result-item.blue
+            .result-item-right
+              %h2
+                Cap Homard
+                %span Saint Pierre
+              .result-item-images
+                %img.image-1{ src: "assets/img/villas_1.jpg" }
+                %img.image-2{ src: "assets/img/villas_2.jpg" }
+                %img.image-3{ src: "assets/img/villas_3.jpg" }
+              .result-item-description
+                %p Perched on the shore of the Plage des Aigrettes with an uninterrupted view of the Indian Ocean, this traditional beach house is replete with tropical splendor. 
+            .result-item-left
+              .result-item-info
+                %ul.item-info-features
+                  %li
+                    %img{ src: "assets/img/icons/guests.svg" }
+                    %span 10
+                  %li
+                    %img{ src: "assets/img/icons/beds.svg" }
+                    %span 4
+                  %li
+                    %img{ src: "assets/img/icons/baths.svg" }
+                    %span 2
+                .item-info-ranking
+                  %h4
+                    Fantastic
+                    %br/
+                    %span 12 comments
+                  .ranking-number
+                    %span 9.6
+                .item-info-prices
+                  %dl
+                    %dt Low Season
+                    %dd $400 p.n
+                    %dt High Season
+                    %dd $800 p.n
+                %a.btn.btn-custom{ href: "villa-detail.html" } Read more
+          .result-item.orange
+            .result-item-right
+              %h2
+                Des Aigrettes
+                %span Saint Pierre
+              .result-item-images
+                %img.image-1{ src: "assets/img/villas_1.jpg" }
+                %img.image-2{ src: "assets/img/villas_2.jpg" }
+                %img.image-3{ src: "assets/img/villas_3.jpg" }
+              .result-item-description
+                %p Perched on the shore of the Plage des Aigrettes with an uninterrupted view of the Indian Ocean, this traditional beach house is replete with tropical splendor. 
+            .result-item-left
+              .result-item-info
+                %ul.item-info-features
+                  %li
+                    %img{ src: "assets/img/icons/guests.svg" }
+                    %span 10
+                  %li
+                    %img{ src: "assets/img/icons/beds.svg" }
+                    %span 4
+                  %li
+                    %img{ src: "assets/img/icons/baths.svg" }
+                    %span 2
+                .item-info-ranking
+                  %h4
+                    Fantastic
+                    %br/
+                    %span 12 comments
+                  .ranking-number
+                    %span 9.6
+                .item-info-prices
+                  %dl
+                    %dt Low Season
+                    %dd $400 p.n
+                    %dt High Season
+                    %dd $800 p.n
+                %a.btn.btn-custom{ href: "villa-detail.html" } Read more
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')
+    :javascript
+      $(document).ready(function(){
+        // Read value on page load
+        $(".selected-range span").html($("#priceRange").val());
+
+        // Read value on change
+        $("#priceRange").change(function(){
+            $(".selected-range span").html($(this).val());
+        });
+      });

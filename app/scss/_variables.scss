@@ -1,0 +1,37 @@
+// Medias querys
+$breakpoints: (
+  "xs": "(min-width: 0px) and (max-width: 575px)",
+  "sm": "(min-width: 576px) and (max-width: 767px)",
+  "md": "(min-width: 768px) and (max-width: 991px)",
+  "lg": "(min-width: 992px) and (max-width: 1199px)",
+  "xl": "(min-width: 1200px) and (max-width: 1399px)",
+  "wecan": "(min-width: 1400px) and (max-width: 1500px)",
+) !default;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+$titleDecorative: "Cinzel Decorative", cursive;
+$title: 'Cinzel', serif;
+$text: "Montserrat", sans-serif;
+
+// Colors
+$primary: #75b9d7;
+$secondary: #192752;
+$white: #fff;
+$textColor: #404040;
+$black: #000;
+$gray: #d8d8d8;
+$lightgray: #f0f0f0;
+
+$orange:#f29985;
+$green: #bdd17c;
+
+// Utils
+$radius: 3px;
+$shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+$textSize: 20px;
+$textMobileSize: 15px;
+$textTabletSize: 17px;

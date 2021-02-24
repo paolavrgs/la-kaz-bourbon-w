@@ -1,0 +1,39 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Privacy Policy | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .page-header{ style: "background-image: url('assets/img/backgrounds/page_header_privacy.jpg');" }
+      %h1 Privacy Policy
+    .page-content
+      .page-content-section
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac convallis metus, non molestie arcu. Donec luctus vestibulum ex in fringilla. Maecenas et aliquam neque. Etiam feugiat risus eu facilisis rutrum. Cras cursus augue urna, ac tempus elit venenatis eget. Fusce malesuada nibh libero, in ullamcorper augue bibendum ac. Fusce suscipit nisl ac nisl commodo, vitae ullamcorper dui blandit. Morbi et augue blandit, efficitur tortor in, finibus justo. Nulla libero velit, vulputate ut blandit interdum, varius vel turpis
+        %ul.unlisted
+          %li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac convallis metus, non molestie arcu.
+          %li Etiam feugiat risus eu facilisis rutrum.
+          %li Fusce suscipit nisl ac nisl commodo, vitae ullamcorper dui blandit.
+          %li Nulla libero velit, vulputate ut blandit interdum, varius vel turpis
+          %li Donec luctus vestibulum ex in fringilla. Maecenas et aliquam neque.
+      - 3.times do
+        .page-content-section
+          %h2 Lorem ipsum dolor sit amet
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac convallis metus, non molestie arcu. Donec luctus vestibulum ex in fringilla. Maecenas et aliquam neque. Etiam feugiat risus eu facilisis rutrum.
+          %ul
+            %li
+              %strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Praesent ac convallis metus, non molestie arcu. Donec luctus vestibulum ex in fringilla. Maecenas et aliquam neque.
+            %li
+              %strong Vivamus est metus, ullamcorper tristique pellentesque vel, commodo non tellus.
+              Curabitur in erat nibh. Quisque tristique ex nec mauris dictum sagittis. Nunc justo sem, sodales a odio at, sollicitudin pretium metus. Ut vehicula nisi eget elit tempus egestas.
+            %li
+              %strong Nullam interdum consectetur libero id vestibulum.
+              Curabitur in erat nibh. Quisque tristique ex nec mauris dictum sagittis. Nunc justo sem, sodales a odio at, sollicitudin pretium metus.
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

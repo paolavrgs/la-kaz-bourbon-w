@@ -1,0 +1,90 @@
+!!!
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+%html{ lang: "en" }
+  %head
+    %title La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .home-banner{ style: "background-image: url(assets/img/backgrounds/banner_bg.jpg)" }
+      %video{id: "bannerVideo", autoplay: "", loop: "", muted: "", src: "assets/videos/banner_video.mp4"}
+      %h1 an island with a big secret
+      %h2 an unforgettable experience
+      = render('app/partials/_widget.haml')
+      .banner-arrow-down
+        %h5 Meet La Reunion
+        %img{ src: "assets/img/icons/button-arrow.svg" }
+      .banner-video-controls
+        %img.pause-video{ src: "assets/img/icons/stop-video.svg" }
+        %img.mute-video{ src: "assets/img/icons/mute-video.svg" }
+    .home-map
+      .home-map-text
+        %h3
+          Our secret island
+          %br
+          %span With a special kind of treasure
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio. Vivamus euismod vulputate metus in mattis. Fusce eget pretium nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent erat dui, semper sed est quis, posuere fermentum nisl.
+        %a.btn.btn-custom.inverse learn more
+      .home-map-image
+        %img{ src: "assets/img/mapa-acuarela.png" }
+    .home-banner-villas
+      .home-banner-villas-text
+        %h2 Our villas
+        %h2 your dreams
+        %a.btn.btn-custom view villas
+    .home-featured
+      .section-title
+        %h1 Featured Villas
+      .home-featured-cards
+        .home-featured-card.green
+          .home-featured-card-title
+            %h3 La Garconniere
+          .home-featured-card-img
+            %img{ src: "assets/img/featured_villa_1.jpg", alt: "La Garconniere" }
+          .home-featured-card-text
+            %p Stunning 19th century bachelor house on a former sugar plantation
+        .home-featured-card.blue
+          .home-featured-card-title
+            %h3 Cap Homad
+          .home-featured-card-img
+            %img{ src: "assets/img/featured_villa_2.jpg", alt: "Cap Homad" }
+          .home-featured-card-text
+            %p Beachfront Creole villa nested in a lagoon of white sand beach
+        .home-featured-card.orange
+          .home-featured-card-title
+            %h3 Des Aigrettes
+          .home-featured-card-img
+            %img{ src: "assets/img/featured_villa_1.jpg", alt: "Des Aigrettes" }
+          .home-featured-card-text
+            %p Beachfront  villa nested in a lagoon of white sand beach
+    .home-about
+      .home-about-card
+        .home-about-card-img
+          %img{ src: "assets/img/home_about_bg.jpg" }
+          %img.play{ src: "assets/img/icons/about_play.svg" }
+        .home-about-card-text
+          %h4 We are La Kaz Bourbon
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio. Vivamus euismod vulputate metus.
+          %a.btn.btn-custom.inverse{ href: "about.html" } About us
+    .home-blog
+      .section-title
+        %h1 Latest News
+      .home-blog-grid
+        - 5.times do |x|
+          .home-blog-card{ class: "#{(x === 0 || x === 1) ? 'two-columns' : 'three-columns' }" }
+            .home-blog-card-img
+              %img{ src: "assets/img/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
+              .home-blog-card-date
+                %span NOV 20
+            .home-blog-card-text
+              %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
+              %span en.reunion.fr
+    .home-banner-contact
+      .home-banner-contact-text
+        %h2 Any questions?
+        %a.btn.btn-custom Contact us
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

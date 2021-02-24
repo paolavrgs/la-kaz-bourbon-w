@@ -1,0 +1,53 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Destination | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .page-header{ style: "background-image: url('assets/img/about/page_header_destination.jpg');" }
+      %h1 Destination
+    .destination-info
+      .destination-info-text
+        %h3 Why here?
+        %p
+          Quite simply because Réunion is THE preeminent vacation destination. Also known as the France of the Indian Ocean, the island is a natural tropical paradise boasting an active volcano, majestic mountains, lush green valleys, tropical vegetation, rivers, white sand beaches, surfing, and so much more ! A veritable melting pot of cultures, Réunion abounds with
+          %strong French, Portuguese, Arabic, Chinese, Indian, and African
+          influences.
+        %p This ethnic diversity is reflected in its warm and generous inhabitants, as well as its gastronomical delights. Whether you’re looking to simply unwind and relax or embark upon an exciting adventure, you’ll find it in Réunion! From the sea to the sky and everything in between, it’s an unforgettable destination.
+      .destination-info-image
+        %img{ src: "assets/img/about/why_us.jpg" }
+    .destination-features{ style: "background-image: url('assets/img/about/background_icons.jpg')" }
+      .destination-feature-item
+        %img{ src: "assets/img/about/destination_icon_1.svg" }
+        %h4 Lorem Ipsum
+        %p Lorem ipsum dolor sit amet, consectetus adipiscing elit.
+      .destination-feature-item
+        %img{ src: "assets/img/about/destination_icon_2.svg" }
+        %h4 Lorem Ipsum
+        %p Lorem ipsum dolor sit amet, consectetus adipiscing elit.
+      .destination-feature-item
+        %img{ src: "assets/img/about/destination_icon_3.svg" }
+        %h4 Lorem Ipsum
+        %p Lorem ipsum dolor sit amet, consectetus adipiscing elit.
+    .gallery
+      .section-title
+        %h1 Gallery
+        %p Lorem ipsum dolor sit amet, consectetus adipiscing elit. Aenean sed justo odio. Vivamus euismod vulputate metus.
+      .gallery-images
+        .gallery-images-slider
+          .gallery-image-item
+            %img{ src: "assets/img/about/gallery_1.png" }
+          .gallery-image-item
+            %img{ src: "assets/img/villas_2.jpg" }
+          .gallery-image-item
+            %img{ src: "assets/img/villas_3.jpg" }
+    = render('app/partials/_contact-form.haml')
+    .mb-5
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

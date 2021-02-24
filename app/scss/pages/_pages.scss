@@ -1,0 +1,94 @@
+.page-header {
+  @include size(100%, 250px);
+  @include bg(cover, no-repeat, center);
+  @include flexcenter();
+
+  @include respond-to(xs) {
+    height: 30vw;
+  }
+
+  @include respond-to(sm) {
+    height: 30vw;
+  }
+
+  @include respond-to(md) {
+    height: 20vw;
+  }
+
+  @include respond-to(lg) {
+    height: 20vw;
+  }
+
+  h1 {
+    color: $white;
+    font-family: $titleDecorative;
+    font-weight: 700;
+    font-size: 60px;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    @include respond-to(sm) {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include respond-to(lg) {
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+}
+
+.page-content {
+  padding: 80px 130px 112px 130px;
+
+  @include respond-to(xs) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 50px 20px;
+  }
+
+  h2 {
+    font-family: $title;
+    font-weight: 700;
+    font-size: 24px;
+    color: $secondary;
+  }
+
+  &-section {
+    margin-bottom: 48px;
+  }
+
+  p, h2 {
+    margin-bottom: 32px;
+  }
+
+  p, li {
+    font-size: $textSize;
+    color: $textColor;
+    font-weight: 400;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  .unlisted {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin: 6px 0;
+    }
+  }
+}

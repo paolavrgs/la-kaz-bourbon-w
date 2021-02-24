@@ -1,0 +1,614 @@
+.product {
+  &.green {
+    .product-detail h1 {
+      color: $green;
+    }
+
+    .btn-custom {
+      background-color: $green;
+    }
+  }
+
+  &.orange {
+    .product-detail h1 {
+      color: $orange;
+    }
+
+    .btn-custom {
+      background-color: $orange;
+    }
+  }
+}
+
+.product-images {
+  padding: 60px 0;
+
+  @include respond-to(xs) {
+    padding: 60px 0 0 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 60px 0 0 0;
+  }
+
+  @include respond-to(md) {
+    padding: 60px 0 30px 0;
+  }
+}
+
+.product-images-slider {
+  .product-image-item {
+    margin: 0 20px;
+
+    @include respond-to(xs) {
+      margin: 0 3px;
+    }
+  
+    @include respond-to(sm) {
+      margin: 0 3px;
+    }
+
+    img {
+      @include size(100%, 500px);
+      object-fit: cover;
+
+      @include respond-to(xs) {
+        height: 200px;
+      }
+    
+      @include respond-to(sm) {
+        height: 200px;
+      }
+
+      @include respond-to(md) {
+        height: 400px;
+      }
+    }
+  }
+
+  .slick-slide {
+    opacity: 0.65;
+    position: relative;
+
+    &::before {
+      @include pseudo();
+      background-color: rgba($black, 0.4);
+      left: 0;
+      @include size(100%);
+    }
+
+    &.slick-current {
+      opacity: 1;
+    }
+  }
+    
+
+  .slick-list {
+    padding: 0 20%;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next,
+  .slick-prev {
+    @include size(64px, 160px);
+    z-index: 1;
+
+    @include respond-to(xs) {
+      @include size(30px, 75px);
+    }
+  
+    @include respond-to(sm) {
+      @include size(30px, 75px);
+    }
+
+    &::before {
+      content: "";
+    }
+  }
+}
+
+.product-detail {
+  padding: 50px 120px;
+
+  @include respond-to(xs) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 50px 80px;
+  }
+
+  h1 {
+    text-align: center;
+    color: $primary;
+    font-family: $titleDecorative;
+    font-size: 60px;
+    line-height: 45px;
+
+    @include respond-to(xs) {
+      font-size: 35px;
+    }
+  
+    @include respond-to(sm) {
+      font-size: 35px;
+    }
+
+    span {
+      color: $secondary;
+      font-family: $text;
+      font-size: 24px;
+      font-weight: 500;
+
+      @include respond-to(xs) {
+        font-size: 20px;
+      }
+    
+      @include respond-to(sm) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.product-description {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 40px));
+  gap: 0 80px;
+  margin-top: 75px;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    gap: 40px 0;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+    gap: 40px 0;
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  p {
+    font-size: $textSize;
+    font-weight: 400;
+    color: $textColor;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+}
+
+.product-features {
+  padding: 40px 120px;
+  display: grid;
+  grid-template-columns: calc(65% - 22.5px) calc(35% - 22.5px);
+  gap: 0 55px;
+
+  @include respond-to(xs) {
+    padding: 40px 20px;
+    grid-template-columns: 100%;
+    gap: 25px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px;
+    grid-template-columns: 100%;
+    gap: 25px 0;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: 100%;
+    gap: 25px 0;
+    padding: 40px 80px;
+  }
+
+  &-list {
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $black;
+      font-size: $textSize;
+      letter-spacing: 1.33px;
+      margin-bottom: 60px;
+
+      @include respond-to(xs) {
+        font-size: $textMobileSize;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @include respond-to(sm) {
+        font-size: $textMobileSize;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @include respond-to(md) {
+        font-size: $textTabletSize;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        @include size(85px);
+        object-fit: contain;
+        margin-right: 60px;
+
+        @include respond-to(xs) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      
+        @include respond-to(sm) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.product-check-card {
+  padding: 32px;
+  box-shadow: $shadow;
+  background-color: $white;
+
+  @include respond-to(xs) {
+    padding: 32px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 32px 20px;
+  }
+
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: $textColor;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .btn-custom {
+    width: 100%;
+    color: $white;
+  }
+
+  input,
+  select {
+    background-color: #f4f4f4;
+    color: #a8a8a8;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+
+    &::placeholder {
+      color: #a8a8a8;
+      font-size: 16px;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      background-color: #f4f4f4;
+    }
+  }
+
+  .input-group {
+    margin: 12px 0;
+
+    input {
+      margin: 0;
+    }
+  }
+
+  .input-group-text {
+    background-color: #f4f4f4;
+    border: 0;
+
+    img {
+      @include size(20px);
+    }
+  }
+
+  input[type="date"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.book-prices {
+  padding: 24px 0;
+  dt {
+    text-decoration: underline;
+    color: $textColor;
+    font-weight: 400;
+    font-size: $textSize;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+
+  dd {
+    color: $textColor;
+    font-weight: 400;
+    font-size: $textSize;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+}
+
+.book-total {
+  padding-top: 24px;
+  border-top: 1px solid $textColor;
+
+  dt,
+  dd {
+    font-size: $textSize;
+    font-weight: 600;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+}
+
+.product-features-list,
+.product-services {
+  h5 {
+    font-family: $title;
+    font-weight: 700;
+    font-size: 28px;
+    color: $secondary;
+    margin-bottom: 50px;
+  }
+}
+
+.product-services {
+  margin-top: 80px;
+}
+
+.product-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+}
+
+.product-service-item {
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    @include size(86px, 62px);
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+
+  span {
+    text-align: center;
+    color: $secondary;
+    font-weight: 600;
+    font-size: $textSize;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+}
+
+.villa-related {
+  padding: 40px 130px 80px 130px;
+  
+  @include respond-to(xs) {
+    padding: 40px 20px 60px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 40px 20px 60px 20px;
+  }
+  
+  @include respond-to(md) {
+    padding: 40px 80px 80px 80px;
+  }
+
+  .nav-tabs {
+    margin-bottom: 80px;
+    border-bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to(xs) {
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+  
+    @include respond-to(sm) {
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    @include respond-to(md) {
+      margin-bottom: 50px;
+      justify-content: space-evenly;
+    }
+
+    .nav-item {
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .nav-link {
+      border-color: transparent;
+      font-family: $title;
+      font-weight: 700;
+      font-size: $textSize;
+      padding: 16px 32px;
+      color: #a8a8a8;
+      border-bottom: 7px solid transparent;
+      background-color: $white;
+
+      @include respond-to(xs) {
+        font-size: $textMobileSize;
+      }
+
+      @include respond-to(sm) {
+        font-size: $textMobileSize;
+      }
+
+      &.active {
+        color: $secondary;
+        border-bottom: 7px solid $secondary;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 15px));
+  gap: 20px 15px;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    gap: 20px 0;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+    gap: 20px 0;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, calc(33.333% - 15px));;
+  }
+
+  .related-item {
+    box-shadow: $shadow;
+
+    img {
+      width: 100%;
+    }
+
+    &-text {
+      padding: 32px;
+      text-align: center;
+
+      h4 {
+        color: $secondary;
+        font-weight: 700;
+        font-size: $textSize;
+
+        @include respond-to(xs) {
+          font-size: $textMobileSize;
+        }
+  
+        @include respond-to(sm) {
+          font-size: $textMobileSize;
+        }
+
+        @include respond-to(md) {
+          font-size: $textTabletSize;
+        }
+      }
+    }
+
+    .related-km {
+      @include flexcenter();
+
+      img {
+        @include size(20px);
+        object-fit: contain;
+        margin-left: 5px;
+      }
+    }
+  }
+}
