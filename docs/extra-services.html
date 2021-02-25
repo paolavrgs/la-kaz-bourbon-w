@@ -182,7 +182,7 @@
               <label for='email'>Email</label>
             </div>
             <div class='form-floating'>
-              <input class='form-control' id='arrivalDate' placeholder='Date of arrival' type='date'>
+              <input class='form-control' id='arrivalDate' onblur='(this.type=&#39;text&#39;)' onfocus='(this.type=&#39;date&#39;)' placeholder='Date of arrival' type='text'>
               <label for='arrivalDate'>Date of arrival</label>
             </div>
           </div>

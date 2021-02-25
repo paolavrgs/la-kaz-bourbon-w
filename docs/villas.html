@@ -116,7 +116,7 @@
         <div class="filter-item">
           <h5>Filter</h5>
           <div class="input-group">
-            <input aria-label="Arrival date" class="form-control" placeholder="Arrival date" type="date">
+            <input aria-label="Arrival date" class="form-control" onblur="(this.type=&#39;text&#39;)" onfocus="(this.type=&#39;date&#39;)" placeholder="Arrival date" type="text">
             <span class="input-group-text">
               <img src="assets/img/icons/home-icon.svg">
             </span>
@@ -184,14 +184,28 @@
     </div>
     <div class="villas-results">
       <div class="results-header">
-        <span>3 villas found</span>
-        <div class="sort-filter">Sort by: Popularity</div>
+        <div class="results-number">
+          <span>
+            <strong>
+              3
+            </strong>
+            villas found
+          </span>
+        </div>
+        <div class="sort-filter">
+          <strong>Sort by:</strong>
+          <select class="form-select">
+            <option selected="selected">Popularity</option>
+            <option value="low-price">Low Price</option>
+            <option value="high-price">High Price</option>
+          </select>
+        </div>
       </div>
       <div class="results-list">
         <div class="result-item green">
           <div class="result-item-right">
             <h2>
-              La Garconniere
+              la Garconniere
               <span>Saint Pierre</span>
             </h2>
             <div class="result-item-images">
@@ -216,7 +230,7 @@
                 </li>
                 <li>
                   <img src="assets/img/icons/baths.svg">
-                  <span>2</span>
+                  <span>3</span>
                 </li>
               </ul>
               <div class="item-info-ranking">
@@ -232,9 +246,9 @@
               <div class="item-info-prices">
                 <dl>
                   <dt>Low Season</dt>
-                  <dd>$400 p.n</dd>
+                  <dd>$400 p.n.</dd>
                   <dt>High Season</dt>
-                  <dd>$800 p.n</dd>
+                  <dd>$800 p.n.</dd>
                 </dl>
               </div>
               <a class="btn btn-custom" href="villa-detail.html">Read more</a>
@@ -261,7 +275,7 @@
               <ul class="item-info-features">
                 <li>
                   <img src="assets/img/icons/guests.svg">
-                  <span>10</span>
+                  <span>8</span>
                 </li>
                 <li>
                   <img src="assets/img/icons/beds.svg">
@@ -274,20 +288,20 @@
               </ul>
               <div class="item-info-ranking">
                 <h4>
-                  Fantastic
+                  Perfect
                   <br>
-                  <span>12 comments</span>
+                  <span>8 comments</span>
                 </h4>
                 <div class="ranking-number">
-                  <span>9.6</span>
+                  <span>10</span>
                 </div>
               </div>
               <div class="item-info-prices">
                 <dl>
                   <dt>Low Season</dt>
-                  <dd>$400 p.n</dd>
+                  <dd>$600 p.n.</dd>
                   <dt>High Season</dt>
-                  <dd>$800 p.n</dd>
+                  <dd>$1000 p.n.</dd>
                 </dl>
               </div>
               <a class="btn btn-custom" href="villa-detail.html">Read more</a>
@@ -314,33 +328,33 @@
               <ul class="item-info-features">
                 <li>
                   <img src="assets/img/icons/guests.svg">
-                  <span>10</span>
+                  <span>12</span>
                 </li>
                 <li>
                   <img src="assets/img/icons/beds.svg">
-                  <span>4</span>
+                  <span>6</span>
                 </li>
                 <li>
                   <img src="assets/img/icons/baths.svg">
-                  <span>2</span>
+                  <span>4</span>
                 </li>
               </ul>
               <div class="item-info-ranking">
                 <h4>
-                  Fantastic
+                  Sublime
                   <br>
-                  <span>12 comments</span>
+                  <span>20 comments</span>
                 </h4>
                 <div class="ranking-number">
-                  <span>9.6</span>
+                  <span>8</span>
                 </div>
               </div>
               <div class="item-info-prices">
                 <dl>
                   <dt>Low Season</dt>
-                  <dd>$400 p.n</dd>
+                  <dd>$320 p.n.</dd>
                   <dt>High Season</dt>
-                  <dd>$800 p.n</dd>
+                  <dd>$580 p.n.</dd>
                 </dl>
               </div>
               <a class="btn btn-custom" href="villa-detail.html">Read more</a>

@@ -13,7 +13,7 @@
             %input.form-control{ id: "email", placeholder: "Email", type: "email" }
             %label{for: "email"} Email
           .form-floating
-            %input.form-control{ id: "arrivalDate", placeholder: "Date of arrival", type: "date" }
+            %input.form-control{ id: "arrivalDate", placeholder: "Date of arrival", type: "text", onfocus:"(this.type='date')", onblur:"(this.type='text')" }
             %label{for: "arrivalDate"} Date of arrival
         .form-row
           .form-floating

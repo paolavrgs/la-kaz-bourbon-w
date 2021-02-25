@@ -23,7 +23,7 @@
           .filter-item
             %h5 Filter
             .input-group
-              %input.form-control{"aria-label" => "Arrival date", placeholder: "Arrival date", type: "date"}
+              %input.form-control{"aria-label" => "Arrival date", placeholder: "Arrival date", type: "text", onfocus:"(this.type='date')", onblur:"(this.type='text')"}
               %span.input-group-text
                 %img{ src: "assets/img/icons/home-icon.svg" }
             %select.form-select
@@ -71,13 +71,22 @@
                   %span (1)
       .villas-results
         .results-header
-          %span 3 villas found
-          .sort-filter Sort by: Popularity
+          .results-number
+            %span
+              %strong
+                3
+              villas found
+          .sort-filter
+            %strong Sort by:
+            %select.form-select
+              %option{selected: "selected"} Popularity
+              %option{value: "low-price"} Low Price
+              %option{value: "high-price"} High Price
         .results-list
           .result-item.green
             .result-item-right
               %h2
-                La Garconniere
+                la Garconniere
                 %span Saint Pierre
               .result-item-images
                 %img.image-1{ src: "assets/img/villas_1.jpg" }
@@ -96,7 +105,7 @@
                     %span 4
                   %li
                     %img{ src: "assets/img/icons/baths.svg" }
-                    %span 2
+                    %span 3
                 .item-info-ranking
                   %h4
                     Fantastic
@@ -107,9 +116,9 @@
                 .item-info-prices
                   %dl
                     %dt Low Season
-                    %dd $400 p.n
+                    %dd $400 p.n.
                     %dt High Season
-                    %dd $800 p.n
+                    %dd $800 p.n.
                 %a.btn.btn-custom{ href: "villa-detail.html" } Read more
           .result-item.blue
             .result-item-right
@@ -127,7 +136,7 @@
                 %ul.item-info-features
                   %li
                     %img{ src: "assets/img/icons/guests.svg" }
-                    %span 10
+                    %span 8
                   %li
                     %img{ src: "assets/img/icons/beds.svg" }
                     %span 4
@@ -136,17 +145,17 @@
                     %span 2
                 .item-info-ranking
                   %h4
-                    Fantastic
+                    Perfect
                     %br/
-                    %span 12 comments
+                    %span 8 comments
                   .ranking-number
-                    %span 9.6
+                    %span 10
                 .item-info-prices
                   %dl
                     %dt Low Season
-                    %dd $400 p.n
+                    %dd $600 p.n.
                     %dt High Season
-                    %dd $800 p.n
+                    %dd $1000 p.n.
                 %a.btn.btn-custom{ href: "villa-detail.html" } Read more
           .result-item.orange
             .result-item-right
@@ -164,26 +173,26 @@
                 %ul.item-info-features
                   %li
                     %img{ src: "assets/img/icons/guests.svg" }
-                    %span 10
+                    %span 12
                   %li
                     %img{ src: "assets/img/icons/beds.svg" }
-                    %span 4
+                    %span 6
                   %li
                     %img{ src: "assets/img/icons/baths.svg" }
-                    %span 2
+                    %span 4
                 .item-info-ranking
                   %h4
-                    Fantastic
+                    Sublime
                     %br/
-                    %span 12 comments
+                    %span 20 comments
                   .ranking-number
-                    %span 9.6
+                    %span 8
                 .item-info-prices
                   %dl
                     %dt Low Season
-                    %dd $400 p.n
+                    %dd $320 p.n.
                     %dt High Season
-                    %dd $800 p.n
+                    %dd $580 p.n.
                 %a.btn.btn-custom{ href: "villa-detail.html" } Read more
     = render('app/partials/_footer.haml')
     = render('app/partials/_scripts.haml')

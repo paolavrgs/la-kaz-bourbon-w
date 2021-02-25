@@ -73,6 +73,15 @@ $(window).on("scroll", () => {
   } else {
     $(".js-gotop").fadeOut();
   }
+
+  const $el = $('.widget-scroll'); 
+  const isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 600 && !isPositionFixed){ 
+    $el.css({'position': 'fixed', 'top': '0px', 'display': 'block'}); 
+  }
+  if ($(this).scrollTop() < 600 && isPositionFixed){
+    $el.css({'position': 'static', 'top': '0px', 'display': 'none'}); 
+  }
 });
 
 $(".js-gotop").on("click", () => {

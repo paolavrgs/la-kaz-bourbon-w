@@ -55,6 +55,7 @@
     @include respond-to(md) {
       font-size: 40px;
       text-align: center;
+      margin-top: -20px;
     }
   }
 
@@ -146,8 +147,8 @@
     gap: 30px 0;
   }
 
-  @include respond-to(md) {
-    padding: 60px 80px;
+  @include respond-to(lg) {
+    padding: 60px 70px;
   }
 
   &-text {
@@ -161,32 +162,17 @@
 
       @include respond-to(xs) {
         font-size: 38px;
-        line-height: 30px;
+        line-height: 36px;
       }
 
       @include respond-to(sm) {
         font-size: 38px;
-        line-height: 30px;
+        line-height: 36px;
       }
 
       @include respond-to(md) {
         font-size: 40px;
-        line-height: 32px;
-      }
-
-      @include respond-to(xs) {
-        font-size: 38px;
-        line-height: 30px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 38px;
-        line-height: 30px;
-      }
-
-      @include respond-to(md) {
-        font-size: 40px;
-        line-height: 32px;
+        line-height: 38px;
       }
 
       span {
@@ -243,8 +229,16 @@
     display: flex;
     justify-content: flex-end;
 
+    @include respond-to(lg) {
+      align-items: center;
+    }
+
     img {
       width: 98%;
+
+      @include respond-to(lg) {
+        width: 100%;
+      }
     }
   }
 }
@@ -279,6 +273,10 @@
 
     @include respond-to(md) {
       right: 40px;
+    }
+
+    @include respond-to(lg) {
+      right: 70px;
     }
   }
 
@@ -340,6 +338,10 @@
     @include respond-to(md) {
       left: 40px;
     }
+
+    @include respond-to(lg) {
+      left: 70px;
+    }
   }
 
   h2 {
@@ -360,7 +362,7 @@
 }
 
 .home-featured {
-  padding: 80px 120px;
+  padding: 100px 120px 70px 120px;
 
   @include respond-to(xs) {
     padding: 50px 20px;
@@ -372,6 +374,10 @@
 
   @include respond-to(md) {
     padding: 60px 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px 70px 70px 70px;
   }
 
   &-cards {
@@ -388,9 +394,12 @@
   }
 
   &-card {
-    margin: 0 11px;
+    margin: 0 12px;
     transition: all ease-in-out 0.3s;
-    height: 400px;
+
+    @include respond-to(lg) {
+      margin: 0 8px;
+    }
 
     &:hover {
       transform: translateY(-16px);
@@ -400,7 +409,6 @@
     &-title {
       padding: 24px 12px;
       background-color: $white;
-      height: 21%;
 
       @include respond-to(md) {
         padding: 24px 0;
@@ -411,6 +419,7 @@
         font-size: 36px;
         text-align: center;
         color: $textColor;
+        margin-bottom: 0;
 
         @include respond-to(xs) {
           font-size: 25px;
@@ -423,11 +432,20 @@
         @include respond-to(md) {
           font-size: 24px;
         }
+
+        @include respond-to(lg) {
+          font-size: 25px;
+        }
       }
     }
 
     &-img {
-      height: 50%;
+      height: 265px;
+
+      @include respond-to(lg) {
+        height: 185px;
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -437,7 +455,6 @@
 
     &-text {
       padding: 24px;
-      height: 28%;
       display: flex;
       align-items: center;
 
@@ -460,6 +477,7 @@
         font-weight: 500;
         text-align: center;
         margin-bottom: 0;
+        line-height: 22px;
 
         @include respond-to(xs) {
           font-size: 15px;
@@ -522,11 +540,16 @@
     padding: 0 20px;
   }
 
+  @include respond-to(lg) {
+    padding: 0 70px;
+  }
+
   &-card {
     background-color: $white;
     box-shadow: $shadow;
-    padding: 40px;
+    padding: 42px 41px;
     display: flex;
+    margin: 0 12px;
 
     @include respond-to(xs) {
       flex-direction: column;
@@ -542,6 +565,14 @@
       width: 50%;
       position: relative;
 
+      &::before {
+        @include pseudo();
+        background-color: rgba($black, .2);
+        @include size(calc(100% - 10px), 100%);
+        z-index: 1;
+        left: 0;
+      }
+
       @include respond-to(xs) {
         width: 100%;
       }
@@ -551,9 +582,14 @@
       }
 
       img {
-        width: 100%;
+        width: calc(100% - 10px);
         
         @include respond-to(md) {
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @include respond-to(lg) {
           height: 100%;
           object-fit: cover;
         }
@@ -561,20 +597,34 @@
 
       img.play {
         position: absolute;
-        @include size(60px, 69px);
+        @include size(61px, 70px);
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         cursor: pointer;
+        z-index: 2;
+        
+        @include respond-to(xs) {
+          @include size(31px, 40px);
+        }
+
+        @include respond-to(sm) {
+          @include size(31px, 40px);
+        }
       }
     }
 
     &-text {
       width: 50%;
-      padding: 0 24px;
+      padding: 0 12px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      .btn-custom {
+        height: 56px;
+        padding: 14px 18px;
+      }
 
       @include respond-to(xs) {
         width: 100%;
@@ -599,6 +649,8 @@
         color: $secondary;
         font-weight: 700;
         margin-bottom: 16px;
+        font-size: 24px;
+        text-transform: uppercase;
       }
 
       p {
@@ -606,6 +658,8 @@
         font-size: $textSize;
         font-weight: 400;
         margin-bottom: 24px;
+        line-height: 24px;
+        width: 90%;
 
         @include respond-to(xs) {
           font-size: 16px;
@@ -636,6 +690,10 @@
 
   @include respond-to(md) {
     padding: 50px 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 80px 70px;
   }
 
   &-grid {

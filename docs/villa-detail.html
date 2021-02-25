@@ -188,7 +188,7 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="input-group">
-                      <input aria-label="Arrival" class="form-control" onfocus="(this.type=&#39;date&#39;)" placeholder="Arrival" type="text">
+                      <input aria-label="Arrival" class="form-control" onblur="(this.type=&#39;text&#39;)" onfocus="(this.type=&#39;date&#39;)" placeholder="Arrival" type="text">
                       <span class="input-group-text">
                         <img src="assets/img/icons/home-icon.svg">
                       </span>
@@ -196,7 +196,7 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="input-group">
-                      <input aria-label="Departure" class="form-control" onfocus="(this.type=&#39;date&#39;)" placeholder="Departure" type="text">
+                      <input aria-label="Departure" class="form-control" onblur="(this.type=&#39;text&#39;)" onfocus="(this.type=&#39;date&#39;)" placeholder="Departure" type="text">
                       <span class="input-group-text">
                         <img src="assets/img/icons/home-icon.svg">
                       </span>
@@ -251,7 +251,7 @@
               <label for='email'>Email</label>
             </div>
             <div class='form-floating'>
-              <input class='form-control' id='arrivalDate' placeholder='Date of arrival' type='date'>
+              <input class='form-control' id='arrivalDate' onblur='(this.type=&#39;text&#39;)' onfocus='(this.type=&#39;date&#39;)' placeholder='Date of arrival' type='text'>
               <label for='arrivalDate'>Date of arrival</label>
             </div>
           </div>

@@ -8,6 +8,7 @@
     %title La Kaz Bourbon
     = render('app/partials/_head.haml')
   %body
+    = render('app/partials/_widget-scroll.haml')
     = render('app/partials/_navbar.haml')
     .home-banner{ style: "background-image: url(assets/img/backgrounds/banner_bg.jpg)" }
       %video{id: "bannerVideo", autoplay: "", loop: "", muted: "", src: "assets/videos/banner_video.mp4"}
@@ -37,7 +38,7 @@
         %a.btn.btn-custom view villas
     .home-featured
       .section-title
-        %h1 Featured Villas
+        %h1 featured Villas
       .home-featured-cards
         .home-featured-card.green
           .home-featured-card-title
@@ -57,7 +58,7 @@
           .home-featured-card-title
             %h3 Des Aigrettes
           .home-featured-card-img
-            %img{ src: "assets/img/featured_villa_1.jpg", alt: "Des Aigrettes" }
+            %img{ src: "assets/img/featured_villa_3.jpg", alt: "Des Aigrettes" }
           .home-featured-card-text
             %p Beachfront  villa nested in a lagoon of white sand beach
     .home-about

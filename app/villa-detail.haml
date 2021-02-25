@@ -75,12 +75,12 @@
                   .row
                     .col-lg-6
                       .input-group
-                        %input.form-control{"aria-label" => "Arrival", placeholder: "Arrival", type: "text", onfocus:"(this.type='date')"}
+                        %input.form-control{"aria-label" => "Arrival", placeholder: "Arrival", type: "text", onfocus:"(this.type='date')", onblur:"(this.type='text')"}
                         %span.input-group-text
                           %img{ src: "assets/img/icons/home-icon.svg" }
                     .col-lg-6
                       .input-group
-                        %input.form-control{"aria-label" => "Departure", placeholder: "Departure", type: "text", onfocus:"(this.type='date')"}
+                        %input.form-control{"aria-label" => "Departure", placeholder: "Departure", type: "text", onfocus:"(this.type='date')", onblur:"(this.type='text')"}
                         %span.input-group-text
                           %img{ src: "assets/img/icons/home-icon.svg" }
                     .col-lg-12

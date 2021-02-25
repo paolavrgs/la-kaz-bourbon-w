@@ -22,6 +22,31 @@
 </head>
 
 <body>
+  <div class='widget widget-scroll'>
+    <form>
+      <div class='input-group'>
+        <span class='input-group-text'>
+          <img src='assets/img/icons/home-icon.svg'>
+        </span>
+        <input aria-label='Arrival date' class='form-control' onblur='(this.type=&#39;text&#39;)' onfocus='(this.type=&#39;date&#39;)' placeholder='Arrival date' type='text'>
+      </div>
+      <div class='input-group'>
+        <label class='input-group-text'>
+          <img src='assets/img/icons/calendar-icon.svg'>
+        </label>
+        <select class='form-select'>
+          <option disabled selected='selected'>Guests</option>
+          <option value='1'>One</option>
+          <option value='2'>Two</option>
+          <option value='3'>Three</option>
+        </select>
+      </div>
+      <div class='input-group'>
+        <input class='btn btn-custom' type='submit' value='View villas'>
+      </div>
+    </form>
+  </div>
+
   <nav class='navbar navbar-expand-lg d-none d-lg-flex' id='laKazBourbonNavbar'>
     <ul class='navbar-nav mb-2 mb-lg-0'>
       <li class='nav-item'>
@@ -115,7 +140,7 @@
   </div>
   <div class="about-second">
     <div class="section-title">
-      <h1>Your Villa</h1>
+      <h1>your Villa</h1>
       <p>
         During your visit to
         <strong>La Kaz Bourbon (The Bourbon House),</strong>

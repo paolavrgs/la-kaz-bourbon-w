@@ -10,7 +10,7 @@ body {
     font-family: $titleDecorative;
     color: $secondary;
     font-size: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 
     @include respond-to(xs) {
       font-size: 30px;
@@ -22,6 +22,10 @@ body {
 
     @include respond-to(md) {
       font-size: 40px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 50px;
     }
   }
 
@@ -42,7 +46,7 @@ body {
     }
   }
 
-  margin-bottom: 56px;
+  margin-bottom: 43px;
 }
 
 // BUTTONS
@@ -117,6 +121,10 @@ body {
 
   .nav-item {
     margin: 0 15px;
+
+    @include respond-to(lg) {
+      margin: 0 10px;
+    }
 
     &.dropdown {
       margin-right: 40px;
@@ -200,17 +208,82 @@ body {
     }
 
     @include respond-to(lg) {
-      @include size(280px, auto);
+      @include size(220px, auto);
     }
   }
 }
 
 .widget {
   z-index: 2;
-  background-color: $white;
+  background-color: rgba($white, 0.9);
   padding: 10px 12px;
   width: 60vw;
   margin-top: 65px;
+
+  @include respond-to(md) {
+    margin-top: 0;
+  }
+
+  &.widget-scroll {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+    box-shadow: $shadow;
+    display: none;
+    position: fixed;
+    background-color: rgba($white, 1);
+    z-index: 5;
+
+    form {
+      width: 60%;
+      margin: 0 auto;
+
+      @include respond-to(xs) {
+        width: 100%;
+      }
+
+      @include respond-to(sm) {
+        width: 100%;
+      }
+
+      @include respond-to(md) {
+        width: 100%;
+      }
+
+      @include respond-to(lg) {
+        width: 80%;
+      }
+
+      .input-group  {
+        &:first-child {
+          margin-left: 32px;
+
+          @include respond-to(xs) {
+            margin-left: 0;
+          }
+    
+          @include respond-to(sm) {
+            margin-left: 0;
+          }
+        }
+
+        .btn-custom {
+          height: 56px;
+          padding: 14px 18px;
+          width: 252px;
+
+          @include respond-to(xs) {
+            width: 100%;
+          }
+    
+          @include respond-to(sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
 
   @include respond-to(xs) {
     width: 80vw;
@@ -246,6 +319,28 @@ body {
       width: 33.333%;
       margin-right: 20px;
 
+      @include respond-to(xs) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      @include respond-to(sm) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      &:first-child {
+        border-right: 1px solid #a8a8a8;
+
+        @include respond-to(xs) {
+          border-right: 0;
+        }
+  
+        @include respond-to(sm) {
+          border-right: 0;
+        }
+      }
+
       &:last-child {
         margin: 0;
       }
@@ -277,8 +372,6 @@ body {
   }
 
   input[type="date"] {
-    border-right: 1px solid #a8a8a8;
-
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
       display: none;
@@ -287,8 +380,38 @@ body {
   }
 
   .input-group-text {
-    background-color: $white;
+    background-color: transparent;
     border: 0;
+  }
+
+  .form-control {
+    background-color: transparent;
+  }
+
+  .form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("../img/icons/arrow_gray.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+
+    @include respond-to(xs) {
+      background-position-x: 100%;
+    }
+
+    @include respond-to(sm) {
+      background-position-x: 100%;
+    }
+
+    @include respond-to(md) {
+      background-position-x: 80%;
+    }
+
+    @include respond-to(lg) {
+      background-position-x: 80%;
+    }
   }
 }
 
@@ -600,6 +723,7 @@ dd {
 
         label {
           color: #a8a8a8;
+          font-size: 18px;
         }
 
         input,
@@ -609,6 +733,11 @@ dd {
           color: #a8a8a8;
           border-radius: 0;
           resize: none;
+          font-size: 18px;
+
+          &::placeholder {
+            font-size: 18px;
+          }
 
           &:focus,
           &:active {
@@ -624,6 +753,8 @@ dd {
 
       .btn-custom {
         margin: 32px auto 0 auto;
+        height: 56px;
+        padding: 15px 18px;
 
         @include respond-to(xs) {
           width: 100%;
