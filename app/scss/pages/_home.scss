@@ -59,6 +59,10 @@
       text-align: center;
       margin-top: -20px;
     }
+
+    @include respond-to(xl) {
+      margin-top: 20px;
+    }
   }
 
   h2 {
