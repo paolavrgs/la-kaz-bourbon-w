@@ -1,0 +1,49 @@
+.news-container {
+  padding: 76px 130px 160px 130px;
+
+   @include respond-to(xs) {
+     padding: 50px 20px;
+   }
+
+   @include respond-to(sm) {
+    padding: 50px 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 60px 70px 80px 70px;
+  }
+
+  .section-title {
+    margin-bottom: 64px;
+  }
+
+  .nav-tabs {
+    margin-bottom: 64px;
+  }
+
+  .blog-card.one-column {
+    @include respond-to(xs) {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+
+    @include respond-to(sm) {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  .blog-card.three-columns {
+    margin: 0 12px 80px 12px;
+
+    @include respond-to(xs) {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+
+    @include respond-to(sm) {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+  }
+}

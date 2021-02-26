@@ -239,7 +239,7 @@
       font-family: $titleDecorative;
       font-weight: 400;
       font-size: 48px;
-      color: $primary;
+      color: $secondary;
 
       @include respond-to(xs) {
         font-size: 32px;

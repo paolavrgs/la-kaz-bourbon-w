@@ -45,11 +45,13 @@
     @include respond-to(xs) {
       font-size: 30px;
       text-align: center;
+      margin-top: -20px;
     }
 
     @include respond-to(sm) {
       font-size: 30px;
       text-align: center;
+      margin-top: -20px;
     }
 
     @include respond-to(md) {
@@ -396,6 +398,13 @@
   &-card {
     margin: 0 12px;
     transition: all ease-in-out 0.3s;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
 
     @include respond-to(lg) {
       margin: 0 8px;
@@ -567,7 +576,7 @@
 
       &::before {
         @include pseudo();
-        background-color: rgba($black, .2);
+        background-color: rgba($black, 0.2);
         @include size(calc(100% - 10px), 100%);
         z-index: 1;
         left: 0;
@@ -583,7 +592,7 @@
 
       img {
         width: calc(100% - 10px);
-        
+
         @include respond-to(md) {
           height: 100%;
           object-fit: cover;
@@ -603,7 +612,7 @@
         transform: translateX(-50%) translateY(-50%);
         cursor: pointer;
         z-index: 2;
-        
+
         @include respond-to(xs) {
           @include size(31px, 40px);
         }
@@ -694,161 +703,5 @@
 
   @include respond-to(lg) {
     padding: 80px 70px;
-  }
-
-  &-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.home-blog-card {
-  background-color: $white;
-  box-shadow: $shadow;
-  margin: 12px;
-  transition: all ease-in-out 0.3s;
-
-  &:hover {
-    transition: all ease-in-out 0.3s;
-    transform: translateY(-16px);
-
-    .home-blog-card-date {
-      background-color: rgba($secondary, 0.7);
-
-      span {
-        color: $white;
-      }
-    }
-  }
-
-  &.two-columns {
-    width: calc(50% - 24px);
-
-    @include respond-to(xs) {
-      width: 100%;
-      margin: 12px 0;
-    }
-
-    @include respond-to(sm) {
-      width: 100%;
-      margin: 12px 0;
-    }
-
-    .home-blog-card-text h4 {
-      font-size: $textSize;
-
-      @include respond-to(xs) {
-        font-size: 15px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 15px;
-      }
-
-      @include respond-to(md) {
-        font-size: 15px;
-      }
-    }
-  }
-
-  &.three-columns {
-    width: calc(33.333% - 24px);
-
-    @include respond-to(xs) {
-      width: 100%;
-      margin: 12px 0;
-    }
-
-    @include respond-to(sm) {
-      width: 100%;
-      margin: 12px 0;
-    }
-
-    .home-blog-card-text h4 {
-      font-size: 18px;
-
-      @include respond-to(xs) {
-        font-size: 15px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 15px;
-      }
-
-      @include respond-to(md) {
-        font-size: 15px;
-      }
-    }
-  }
-
-  &-img {
-    position: relative;
-
-    .home-blog-card-date {
-      position: absolute;
-      right: 25px;
-      top: 20px;
-      background-color: rgba($white, 0.6);
-      border-radius: 4px;
-      padding: 6px 12px;
-
-      span {
-        color: $secondary;
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &-text {
-    color: $textColor;
-    padding: 24px 40px;
-
-    @include respond-to(xs) {
-      padding: 12px 20px;
-    }
-
-    @include respond-to(sm) {
-      padding: 12px 20px;
-    }
-
-    @include respond-to(md) {
-      padding: 12px 20px;
-    }
-
-    h4 {
-      font-weight: 700;
-      margin-bottom: 8px;
-
-      @include respond-to(xs) {
-        margin-bottom: 5px;
-      }
-
-      @include respond-to(sm) {
-        margin-bottom: 5px;
-      }
-    }
-
-    span {
-      font-size: 16px;
-      font-weight: 400;
-
-      @include respond-to(xs) {
-        font-size: 13px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 13px;
-      }
-
-      @include respond-to(md) {
-        font-size: 13px;
-      }
-    }
   }
 }

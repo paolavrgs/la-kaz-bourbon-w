@@ -19,6 +19,11 @@ $(".product-images-slider").slick({
     "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='assets/img/icons/arrow_right.svg'></button>"
 });
 
+$('.modal').on('shown.bs.modal', function (e) {
+  $('.product-images-slider').slick('setPosition');
+  $('.wrap-modal-slider').addClass('open');
+})
+
 $(".gallery-images-slider").slick({
   infinite: true,
   slidesToShow: 1,
@@ -29,29 +34,6 @@ $(".gallery-images-slider").slick({
     "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='assets/img/icons/arrow_left.svg'></button>",
   nextArrow:
     "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='assets/img/icons/arrow_right.svg'></button>",
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
 });
 
 new WOW().init();

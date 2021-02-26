@@ -102,6 +102,7 @@
 
   <div class="product green">
     <div class="product-images">
+      <a class="btn btn-custom" data-bs-target="#productGalleryModal" data-bs-toggle="modal" href="#">See all photos</a>
       <div class="product-images-slider">
         <div class="product-image-item">
           <img src="assets/img/villas_1.jpg">
@@ -111,6 +112,27 @@
         </div>
         <div class="product-image-item">
           <img src="assets/img/villas_3.jpg">
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal gallery-modal fade" id="productGalleryModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrap-modal-slider">
+              <div class="product-images-slider">
+                <img src="assets/img/villas_1.jpg">
+                <img src="assets/img/villas_2.jpg">
+                <img src="assets/img/villas_3.jpg">
+                <img src="assets/img/villas_1.jpg">
+                <img src="assets/img/villas_2.jpg">
+                <img src="assets/img/villas_3.jpg">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -250,9 +272,12 @@
               <input class='form-control' id='email' placeholder='Email' type='email'>
               <label for='email'>Email</label>
             </div>
-            <div class='form-floating'>
+            <div class='form-floating input-group'>
               <input class='form-control' id='arrivalDate' onblur='(this.type=&#39;text&#39;)' onfocus='(this.type=&#39;date&#39;)' placeholder='Date of arrival' type='text'>
               <label for='arrivalDate'>Date of arrival</label>
+              <span class='input-group-text'>
+                <img src='assets/img/icons/home-icon.svg'>
+              </span>
             </div>
           </div>
           <div class='form-row'>
@@ -655,13 +680,13 @@
           <a href='about.html'>About us</a>
         </li>
         <li>
-          <a href='#'>Reviews</a>
+          <a href='reviews.html'>Reviews</a>
         </li>
         <li>
-          <a href='#'>News</a>
+          <a href='news.html'>News</a>
         </li>
         <li>
-          <a href='#'>Contact us</a>
+          <a href='contact.html'>Contact us</a>
         </li>
         <li>
           <a href='terms-and-conditions.html'>Terms & conditions</a>

@@ -35,26 +35,26 @@
       .home-banner-villas-text
         %h2 Our villas
         %h2 your dreams
-        %a.btn.btn-custom view villas
+        %a.btn.btn-custom{ href: "villas.html" } view villas
     .home-featured
       .section-title
         %h1 featured Villas
       .home-featured-cards
-        .home-featured-card.green
+        %a.home-featured-card.green{ href: "villa-detail.html" }
           .home-featured-card-title
             %h3 La Garconniere
           .home-featured-card-img
             %img{ src: "assets/img/featured_villa_1.jpg", alt: "La Garconniere" }
           .home-featured-card-text
             %p Stunning 19th century bachelor house on a former sugar plantation
-        .home-featured-card.blue
+        %a.home-featured-card.blue{ href: "villa-detail.html" }
           .home-featured-card-title
             %h3 Cap Homad
           .home-featured-card-img
             %img{ src: "assets/img/featured_villa_2.jpg", alt: "Cap Homad" }
           .home-featured-card-text
             %p Beachfront Creole villa nested in a lagoon of white sand beach
-        .home-featured-card.orange
+        %a.home-featured-card.orange{ href: "villa-detail.html" }
           .home-featured-card-title
             %h3 Des Aigrettes
           .home-featured-card-img
@@ -73,14 +73,14 @@
     .home-blog
       .section-title
         %h1 Latest News
-      .home-blog-grid
+      .blog-grid
         - 5.times do |x|
-          .home-blog-card{ class: "#{(x === 0 || x === 1) ? 'two-columns' : 'three-columns' }" }
-            .home-blog-card-img
-              %img{ src: "assets/img/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
-              .home-blog-card-date
+          .blog-card{ class: "#{(x === 0 || x === 1) ? 'two-columns' : 'three-columns' }" }
+            .blog-card-img
+              %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
+              .blog-card-date
                 %span NOV 20
-            .home-blog-card-text
+            .blog-card-text
               %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
               %span en.reunion.fr
     .home-banner-contact
