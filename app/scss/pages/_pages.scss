@@ -144,6 +144,10 @@
     img {
       @include size(205px, 165px);
       object-fit: contain;
+
+      @include respond-to(md) {
+        width: 100%;
+      }
     }
   }
 }

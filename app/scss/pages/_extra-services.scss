@@ -55,7 +55,7 @@
     }
 
     @include respond-to(md) {
-      grid-template-columns: repeat(2, calc(50% - #{$gap}));
+      grid-template-columns: repeat(2, calc(50% - #{$gap / 2}));
     }
   }
 

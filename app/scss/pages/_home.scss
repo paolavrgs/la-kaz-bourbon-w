@@ -420,7 +420,7 @@
     }
 
     &-title {
-      padding: 24px 12px;
+      padding: 24px 0;
       background-color: $white;
 
       @include respond-to(md) {
@@ -491,6 +491,7 @@
         text-align: center;
         margin-bottom: 0;
         line-height: 22px;
+        @include truncate(100%, 2);
 
         @include respond-to(xs) {
           font-size: 15px;

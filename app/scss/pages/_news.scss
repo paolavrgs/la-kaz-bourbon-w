@@ -45,5 +45,32 @@
       margin: 0;
       margin-bottom: 32px;
     }
+
+    @include respond-to(md) {
+      margin: 0 12px 40px 12px;
+    }
+
+    @include respond-to(lg) {
+      margin: 0 12px 40px 12px;
+    }
+  }
+}
+
+.load-more-news {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    color: $secondary;
+    font-size: $textSize;
+    font-weight: 500;
+  }
+
+  img {
+    margin-top: 12px;
+    @include size(16px);
+    object-fit: contain;
   }
 }

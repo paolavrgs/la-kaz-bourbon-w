@@ -1,0 +1,74 @@
+.not-found {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include bg(cover, no-repeat, center);
+  background-image: url("../img/backgrounds/404_bg.jpg");
+
+  @include respond-to(xs) {
+    height: 60vh;
+  }
+
+  @include respond-to(sm) {
+    height: 60vh;
+  }
+}
+
+.not-found-message {
+  h3, h2 {
+    font-family: $title;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: $white;
+    text-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 60px;
+    margin-bottom: 0;
+
+    @include respond-to(xs) {
+      font-size: 40px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 50px;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 30px;
+    }
+  }
+}
+
+.not-found-code {
+  h1 {
+    font-size: 200px;
+    font-family: $titleDecorative;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: $white;
+    text-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0;
+    margin-top: -10px;
+
+    @include respond-to(xs) {
+      font-size: 110px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 110px;
+    }
+  }
+}

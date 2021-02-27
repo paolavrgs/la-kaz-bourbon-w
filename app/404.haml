@@ -6,18 +6,16 @@
   end
 %html{ lang: "en" }
   %head
-    %title Página no encontrada | La Kaz Bourbon
+    %title 404 Page not found | La Kaz Bourbon
     = render('app/partials/_head.haml')
   %body
     = render('app/partials/_navbar.haml')
     %section.not-found
       .not-found-message
-        %h3 LO SENTIMOS
-        %span No podemos encontrar la página que está buscando
+        %h2 Oops
       .not-found-code
         %h1 404
       .not-found-message
-        %h3 Te llevaremos de vuelta
-      %a.btn.btn-custom.btn-shadow{ href: "/" } Volver al inicio
+        %h3 The page was not found
     = render('app/partials/_footer.haml')
     = render('app/partials/_scripts.haml')

@@ -70,6 +70,7 @@ body {
       color: $primary;
       text-decoration: none;
       outline: none;
+      box-shadow: none;
     }
   }
 
@@ -79,6 +80,7 @@ body {
     color: $white;
     text-decoration: none;
     outline: none;
+    box-shadow: none;
   }
 }
 
@@ -783,6 +785,15 @@ dd {
         background-color: transparent;
         border: 0;
         border-bottom: 2px solid #a8a8a8;
+        border-radius: 0;
+
+        @include respond-to(md) {
+          padding-right: 0;
+
+          img {
+            width: 22px;
+          }
+        }
       }
     }
 
@@ -862,15 +873,6 @@ dd {
   align-items: center;
   position: relative;
 
-  &::before {
-    @include pseudo();
-    @include size(100%, 2px);
-    background-color: #f4f4f4;
-    bottom: 1px;
-    left: 0;
-    z-index: -1;
-  }
-
   @include respond-to(xs) {
     margin-bottom: 20px;
     justify-content: center;
@@ -887,6 +889,10 @@ dd {
   }
 
   .nav-item {
+    margin-top: 2px;
+    flex-grow: 1;
+    border-bottom: 2px solid #f4f4f4;
+
     &:active,
     &:focus {
       outline: none;
@@ -902,6 +908,7 @@ dd {
     padding: 16px 32px;
     color: #a8a8a8;
     background-color: $white;
+    width: 100%;
 
     @include respond-to(xs) {
       font-size: $textMobileSize;
@@ -1072,6 +1079,14 @@ dd {
       margin: 12px 0;
     }
 
+    @include respond-to(md) {
+      width: calc(50% - 24px);
+    }
+
+    @include respond-to(lg) {
+      width: calc(50% - 24px);
+    }
+
     .blog-card-text h4 {
       font-size: 18px;
 
@@ -1160,4 +1175,8 @@ dd {
       }
     }
   }
+}
+
+.slick-slide:focus {
+  outline: none;
 }

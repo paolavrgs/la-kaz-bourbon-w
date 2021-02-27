@@ -26,21 +26,36 @@
             .modal-header
               %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "modal", type: "button"}
             .modal-body
-              .wrap-modal-slider
-                .product-images-slider
-                  %img{ src: "assets/img/villas_1.jpg" }
-                  %img{ src: "assets/img/villas_2.jpg" }
-                  %img{ src: "assets/img/villas_3.jpg" }
-                  %img{ src: "assets/img/villas_1.jpg" }
-                  %img{ src: "assets/img/villas_2.jpg" }
-                  %img{ src: "assets/img/villas_3.jpg" }
+              .product-gallery
+                %img{ src: "assets/img/villas_1.jpg" }
+                %img{ src: "assets/img/villas_2.jpg" }
+                %img{ src: "assets/img/villas_3.jpg" }
+                %img{ src: "assets/img/villas_1.jpg" }
+                %img{ src: "assets/img/villas_2.jpg" }
+                %img{ src: "assets/img/villas_3.jpg" }
+                %img{ src: "assets/img/villas_1.jpg" }
+                %img{ src: "assets/img/villas_2.jpg" }
+                %img{ src: "assets/img/villas_3.jpg" }
+                %img{ src: "assets/img/villas_1.jpg" }
+                %img{ src: "assets/img/villas_2.jpg" }
+                %img{ src: "assets/img/villas_3.jpg" }
       .product-detail
         %h1
           La Garconniere
           %br
           %span Saint Pierre
         .product-description
-          %p Perched on the shore of the Plage des Aigrettes with an uninterrupted view of the Indian Ocean, this traditional beach house is replete with tropical splendor. Surrounded by a tropical garden, the property includes a swimming pool, an outdoor shower, and direct access to the beach. The terrace provides the perfect spot to kick back and do some whale watching or marvel at the spectacular tropical sunsets.
+          %p
+            Perched on the shore of the
+            %strong Plage des Aigrettes
+            with an uninterrupted view of the
+            %strong Indian Ocean,
+            this traditional beach house is replete with tropical splendor. Surrounded by a 
+            %strong tropical garden,
+            the property includes a
+            %strong swimming pool, an outdoor shower, and direct access to the beach.
+            The terrace provides the perfect spot to kick back and do some
+            %strong whale watching or marvel at the spectacular tropical sunsets.
           %img{ src: "assets/img/la-garconniere-map.png" }
       .product-features
         .product-features-left
@@ -49,15 +64,36 @@
             %ul
               %li
                 %img{ src: "assets/img/icons/activities/village.svg" }
-                Go “local” a short 10-minute walk away in the village of Boucan Canot, where you’ll find plenty of restaurants and bars to explore.
+                %span
+                  Go “local” a
+                  %strong short 10-minute walk
+                  away in the village of
+                  %strong Boucan Canot, where you’ll find plenty of
+                  %strong restaurants and bars
+                  to explore.
               %li
                 %img{ src: "assets/img/icons/activities/fruits.svg" }
-                Need to stock up on supplies or snacks?
-                %br
-                Take a quick 2-minute drive to the supermarket or stop by one of several roadside fruit and vegetable stands.
+                %span
+                  Need to stock up on
+                  %strong supplies
+                  or snacks?
+                  %br
+                  Take a
+                  %strong quick 2-minute drive to the supermarket
+                  or stop by one of several
+                  %strong roadside fruit and vegetable stands.
               %li
                 %img{ src: "assets/img/icons/activities/surfing.svg" }
-                Need more? Check out the surf breaks at the nearby Plage des Brisants or drive 10 minutes to the lively bars and restaurants surrounding the Plage des Roches Noires.
+                %span
+                  Need more? Check out the
+                  %strong surf breaks
+                  at the nearby
+                  %strong Plage des Brisants or
+                  %strong drive 10 minutes
+                  to the lively
+                  %strong bars and restaurants
+                  surrounding
+                  %strong the Plage des Roches Noires.
           .product-services
             %h5 Services
             .product-services-grid
@@ -79,6 +115,14 @@
               .product-service-item
                 %img{ src: "assets/img/icons/services/wifi.svg" }
                 %span Internet
+            .load-more-services
+              %span See all 20 services
+              %svg{height: "18", viewbox: "0 0 18 18", width: "18", xmlns: "http://www.w3.org/2000/svg"}
+                %g{fill: "none", "fill-rule" => "evenodd", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+                  %g{stroke: "#192752", "stroke-width" => "2"}
+                    %g
+                      %g
+                        %path{d: "M0 0L8 8 16 0M0 8L8 16 16 8", transform: "translate(-711 -2158) translate(671 2123) translate(41 36)"}
         .product-features-right
           .product-check.sticky-top
             .product-check-card
@@ -109,6 +153,7 @@
                 %dl
                   %dt $400 x 2 nights
                   %dd $800
+                %dl
                   %dt Service tax
                   %dd $80
               .book-total

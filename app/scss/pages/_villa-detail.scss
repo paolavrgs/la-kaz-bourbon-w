@@ -1,4 +1,26 @@
 .product {
+  .load-more-services {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      color: $primary;
+      font-size: $textSize;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .btn-custom {
+    background-color: $primary;
+  }
+
   &.green {
     .product-detail h1 {
       color: $green;
@@ -6,6 +28,16 @@
 
     .btn-custom {
       background-color: $green;
+    }
+
+    .load-more-services {
+      span {
+        color: $green;
+      }
+
+      svg > g > g {
+        stroke: $green;
+      }
     }
   }
 
@@ -17,31 +49,65 @@
     .btn-custom {
       background-color: $orange;
     }
+
+    .load-more-services {
+      span {
+        color: $orange;
+      }
+
+      svg > g > g {
+        stroke: $orange;
+      }
+    }
   }
 
   .gallery-modal .modal-dialog {
     max-width: 85vw;
+
+    @include respond-to(xs) {
+      max-width: 100%;
+    }
+
+    @include respond-to(sm) {
+      max-width: 100%;
+    }
 
     .modal-header {
       border-bottom: none;
       padding-bottom: 0;
     }
 
-    .product-images-slider img {
-      margin: 0 6px;
-      height: 600px;
-    }
-
-    .slick-next,
-    .slick-prev {
-      height: 160px !important;
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
 
       @include respond-to(xs) {
-        height: 75px !important;
+        grid-template-columns: 1fr;
+        gap: 10px 0;
       }
-    
+
       @include respond-to(sm) {
-        height: 75px !important;
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+      }
+
+      @include respond-to(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+
+        @include respond-to(xs) {
+          height: unset;
+        }
+  
+        @include respond-to(sm) {
+          height: unset;
+        }
       }
     }
   }
@@ -52,11 +118,11 @@
   position: relative;
 
   @include respond-to(xs) {
-    padding: 88px 0 0 0;
+    padding: 20px 0 0 0;
   }
 
   @include respond-to(sm) {
-    padding: 88px 0 0 0;
+    padding: 20px 0 0 0;
   }
 
   @include respond-to(md) {
@@ -69,10 +135,30 @@
     bottom: 50px;
     right: calc(20% + 48px);
     height: 40px;
-    padding: 6px;
+    padding: 8px;
     border-radius: 6px;
     width: 195px;
     opacity: 0.85;
+
+    @include respond-to(xs) {
+      bottom: -40px;
+      height: auto;
+      font-size: 15px;
+      transform: translateX(50%);
+      right: 50%;
+      width: 100%;
+      border-radius: 0;
+    }
+
+    @include respond-to(sm) {
+      bottom: -40px;
+      height: auto;
+      font-size: 15px;
+      transform: translateX(50%);
+      right: 50%;
+      width: 100%;
+      border-radius: 0;
+    }
   }
 }
 
@@ -162,14 +248,18 @@
   padding: 50px 120px;
 
   @include respond-to(xs) {
-    padding: 50px 20px;
+    padding: 70px 20px 50px 20px;
   }
 
   @include respond-to(sm) {
-    padding: 50px 20px;
+    padding: 70px 20px 50px 20px;
   }
 
   @include respond-to(md) {
+    padding: 50px 80px;
+  }
+
+  @include respond-to(lg) {
     padding: 50px 80px;
   }
 
@@ -207,18 +297,20 @@
 
 .product-description {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - 40px));
-  gap: 0 80px;
+  grid-template-columns: repeat(2, calc(50% - 25px));
+  gap: 0 50px;
   margin-top: 75px;
 
   @include respond-to(xs) {
     grid-template-columns: 100%;
-    gap: 40px 0;
+    gap: 25px 0;
+    margin-top: 25px;
   }
 
   @include respond-to(sm) {
     grid-template-columns: 100%;
-    gap: 40px 0;
+    gap: 25px 0;
+    margin-top: 25px;
   }
 
   img {
@@ -231,6 +323,11 @@
     font-size: $textSize;
     font-weight: 400;
     color: $textColor;
+    line-height: 26px;
+
+    strong {
+      font-weight: 600;
+    }
 
     @include respond-to(xs) {
       font-size: $textMobileSize;
@@ -247,10 +344,11 @@
 }
 
 .product-features {
-  padding: 40px 120px;
+  $gap: 40px;
+  padding: 40px 130px;
   display: grid;
-  grid-template-columns: calc(65% - 22.5px) calc(35% - 22.5px);
-  gap: 0 55px;
+  grid-template-columns: calc(62% - #{$gap / 2}) calc(38% - #{$gap / 2});
+  gap: 0 #{$gap};
 
   @include respond-to(xs) {
     padding: 40px 20px;
@@ -270,6 +368,11 @@
     padding: 40px 80px;
   }
 
+  @include respond-to(lg) {
+    grid-template-columns: calc(55% - #{$gap / 2}) calc(45% - #{$gap / 2});
+    padding: 40px 80px;
+  }
+
   &-list {
     ul {
       padding-left: 0;
@@ -284,6 +387,7 @@
       font-size: $textSize;
       letter-spacing: 1.33px;
       margin-bottom: 60px;
+      line-height: 23px;
 
       @include respond-to(xs) {
         font-size: $textMobileSize;
@@ -302,9 +406,19 @@
       @include respond-to(md) {
         font-size: $textTabletSize;
       }
+      
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      span {
+        strong {
+          font-weight: 600;
+        }
       }
 
       img {
@@ -320,6 +434,10 @@
         @include respond-to(sm) {
           margin-right: 0;
           margin-bottom: 20px;
+        }
+
+        @include respond-to(lg) {
+          margin-right: 30px;
         }
       }
     }
@@ -343,6 +461,7 @@
     font-size: 24px;
     font-weight: bold;
     color: $textColor;
+    margin-bottom: 20px;
 
     span {
       font-weight: 400;
@@ -352,6 +471,7 @@
   .btn-custom {
     width: 100%;
     color: $white;
+    height: 56px;
   }
 
   input,
@@ -408,11 +528,33 @@
 
 .book-prices {
   padding: 24px 0;
+
+  dl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   dt {
-    text-decoration: underline;
     color: $textColor;
     font-weight: 400;
     font-size: $textSize;
+    position: relative;
+    width: auto;
+
+    &::before {
+      @include pseudo();
+      width: 100%;
+      height: 1px;
+      background-color: $textColor;
+      left: 0;
+      bottom: 3px;
+    }
 
     @include respond-to(xs) {
       font-size: $textMobileSize;
@@ -431,6 +573,7 @@
     color: $textColor;
     font-weight: 400;
     font-size: $textSize;
+    width: auto;
 
     @include respond-to(xs) {
       font-size: $textMobileSize;
@@ -500,6 +643,10 @@
     @include size(86px, 62px);
     object-fit: contain;
     margin-bottom: 16px;
+
+    @include respond-to(lg) {
+      @include size(80px, 55px);
+    }
   }
 
   span {
@@ -518,6 +665,10 @@
 
     @include respond-to(md) {
       font-size: $textTabletSize;
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
     }
   }
 }
@@ -554,6 +705,10 @@
   }
 
   @include respond-to(md) {
+    grid-template-columns: repeat(3, calc(33.333% - 15px));;
+  }
+
+  @include respond-to(lg) {
     grid-template-columns: repeat(3, calc(33.333% - 15px));;
   }
 
