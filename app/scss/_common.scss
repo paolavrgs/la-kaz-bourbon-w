@@ -941,10 +941,12 @@ dd {
   box-shadow: $shadow;
   margin: 12px;
   transition: all ease-in-out 0.3s;
+  text-decoration: none;
 
   &:hover {
     transition: all ease-in-out 0.3s;
     transform: translateY(-16px);
+    text-decoration: none;
 
     .blog-card-date {
       background-color: rgba($secondary, 0.7);

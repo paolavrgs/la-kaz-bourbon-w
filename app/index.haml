@@ -75,7 +75,7 @@
         %h1 Latest News
       .blog-grid
         - 5.times do |x|
-          .blog-card{ class: "#{(x === 0 || x === 1) ? 'two-columns' : 'three-columns' }" }
+          %a.blog-card{ class: "#{(x === 0 || x === 1) ? 'two-columns' : 'three-columns' }", href: "new-detail.html" }
             .blog-card-img
               %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
               .blog-card-date

@@ -28,14 +28,14 @@
         .tab-pane.fade.show.active{id: "all-news", "aria-labelledby" => "all-news-tab", role: "tabpanel"}
           .blog-grid
             .blog-card.one-column
-              .blog-card-img
+              %a.blog-card-img{ href: "new-detail.html" }
                 %img{ src: "assets/img/news/latest_news_big.jpg", alt: "Loremp ipsum" }
                 .blog-card-info
                   %span.info-category lifestyle
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
                   %span.info-date January 7, 2020
             - 6.times do |x|
-              .blog-card.three-columns
+              %a.blog-card.three-columns{ href: "new-detail.html" }
                 .blog-card-img
                   %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
                   .blog-card-date
@@ -49,14 +49,14 @@
         .tab-pane.fade{id: "lifestyle", "aria-labelledby" => "lifestyle-tab", role: "tabpanel"}
           .blog-grid
             .blog-card.one-column
-              .blog-card-img
+              %a.blog-card-img{ href: "new-detail.html" }
                 %img{ src: "assets/img/news/latest_news_big.jpg", alt: "Loremp ipsum" }
                 .blog-card-info
                   %span.info-category lifestyle
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
                   %span.info-date January 7, 2020
             - 6.times do |x|
-              .blog-card.three-columns
+              %a.blog-card.three-columns{ href: "new-detail.html" }
                 .blog-card-img
                   %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
                   .blog-card-date
@@ -64,17 +64,20 @@
                 .blog-card-text
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
                   %span en.reunion.fr
+          .load-more-news
+            %span See more
+            %img{ src: "assets/img/icons/arrows.svg" }
         .tab-pane.fade{id: "food", "aria-labelledby" => "food-tab", role: "tabpanel"}
           .blog-grid
             .blog-card.one-column
-              .blog-card-img
+              %a.blog-card-img{ href: "new-detail.html" }
                 %img{ src: "assets/img/news/latest_news_big.jpg", alt: "Loremp ipsum" }
                 .blog-card-info
                   %span.info-category lifestyle
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
                   %span.info-date January 7, 2020
             - 6.times do |x|
-              .blog-card.three-columns
+              %a.blog-card.three-columns{ href: "new-detail.html" }
                 .blog-card-img
                   %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
                   .blog-card-date
@@ -82,17 +85,20 @@
                 .blog-card-text
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
                   %span en.reunion.fr
+          .load-more-news
+            %span See more
+            %img{ src: "assets/img/icons/arrows.svg" }
         .tab-pane.fade{id: "travel", "aria-labelledby" => "travel-tab", role: "tabpanel"}
           .blog-grid
             .blog-card.one-column
-              .blog-card-img
+              %a.blog-card-img{ href: "new-detail.html" }
                 %img{ src: "assets/img/news/latest_news_big.jpg", alt: "Loremp ipsum" }
                 .blog-card-info
                   %span.info-category lifestyle
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
                   %span.info-date January 7, 2020
             - 6.times do |x|
-              .blog-card.three-columns
+              %a.blog-card.three-columns{ href: "new-detail.html" }
                 .blog-card-img
                   %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
                   .blog-card-date
@@ -100,17 +106,20 @@
                 .blog-card-text
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
                   %span en.reunion.fr
+          .load-more-news
+            %span See more
+            %img{ src: "assets/img/icons/arrows.svg" }
         .tab-pane.fade{id: "la-reunion", "aria-labelledby" => "la-reunion-tab", role: "tabpanel"}
           .blog-grid
             .blog-card.one-column
-              .blog-card-img
+              %a.blog-card-img{ href: "new-detail.html" }
                 %img{ src: "assets/img/news/latest_news_big.jpg", alt: "Loremp ipsum" }
                 .blog-card-info
                   %span.info-category lifestyle
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
                   %span.info-date January 7, 2020
             - 6.times do |x|
-              .blog-card.three-columns
+              %a.blog-card.three-columns{ href: "new-detail.html" }
                 .blog-card-img
                   %img{ src: "assets/img/news/latest_news_#{x + 1}.jpg", alt: "Loremp ipsum" }
                   .blog-card-date
@@ -118,5 +127,8 @@
                 .blog-card-text
                   %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
                   %span en.reunion.fr
+          .load-more-news
+            %span See more
+            %img{ src: "assets/img/icons/arrows.svg" }
     = render('app/partials/_footer.haml')
     = render('app/partials/_scripts.haml')

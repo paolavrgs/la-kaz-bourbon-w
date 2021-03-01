@@ -1,0 +1,70 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title New title | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_navbar.haml')
+    .news-container
+      .new-title
+        %h1 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae magna nibh. Aliquam erat volutpat.”
+        %p January 7, 2020 - Lifestyle - by en.reunion.fr
+      .new-image-cover
+        %img{ src: "assets/img/news/latest_news_big.jpg"}
+      .new-detail-grid
+        .new-detail-content
+          .new-share
+            %img{ src: "assets/img/icons/share.svg" }
+            Share:
+            %ul
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/facebook-btn.svg" }
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/twitter-btn.svg" }
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/pinterest-btn.svg" }
+          .new-content
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida pulvinar magna, sit amet venenatis massa dignissim viverra. Sed feugiat sodales varius. Ut vulputate turpis odio, eu ultrices lectus condimentum at. Fusce lobortis euismod pharetra. Morbi turpis sem, egestas vel eros nec, tincidunt fringilla ante. Donec vel diam at ipsum sagittis venenatis eget et nibh. Morbi a eleifend elit, in convallis mi. Sed aliquet tortor quis leo hendrerit, sit amet aliquam sem convallis. Curabitur risus libero, aliquet ut blandit ut, dictum at diam. Mauris fermentum sodales velit, non scelerisque arcu tincidunt sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            %figure
+              %img{ src: "assets/img/news/news_1.jpg" }
+              %figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .new-content-section
+              %h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida pulvinar magna, sit amet venenatis massa dignissim viverra. Sed feugiat sodales varius. Ut vulputate turpis odio, eu ultrices lectus condimentum at. Fusce lobortis euismod pharetra. Morbi turpis sem, egestas vel eros nec, tincidunt fringilla ante. Donec vel diam at ipsum sagittis venenatis eget et nibh. Morbi a eleifend elit, in convallis mi. Sed aliquet tortor quis leo hendrerit, sit amet aliquam sem convallis. Curabitur risus libero, aliquet ut blandit ut, dictum at diam. Mauris fermentum sodales velit, non scelerisque arcu tincidunt sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            %figure
+              %img{ src: "assets/img/news/news_2.jpg" }
+              %figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .new-content-section
+              %h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida pulvinar magna, sit amet venenatis massa dignissim viverra. Sed feugiat sodales varius. Ut vulputate turpis odio, eu ultrices lectus condimentum at. Fusce lobortis euismod pharetra. Morbi turpis sem, egestas vel eros nec, tincidunt fringilla ante.
+          .new-share
+            %img{ src: "assets/img/icons/share.svg" }
+            Share:
+            %ul
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/facebook-btn.svg" }
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/twitter-btn.svg" }
+              %li
+                %a{ href: "#" }
+                  %img{ src: "assets/img/icons/pinterest-btn.svg" }
+        .new-detail-related
+          %h5 Related Content
+          .new-related-list
+            - 5.times do |i|
+              .new-related-item
+                %img{ src: "assets/img/news/related_new_#{i + 1}.jpg" }
+                .new-related-text
+                  %h4 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio.”
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')

@@ -13,6 +13,10 @@
     padding: 60px 70px 80px 70px;
   }
 
+  @include respond-to(lg) {
+    padding: 76px 80px 160px 80px;
+  }
+
   .section-title {
     margin-bottom: 64px;
   }
@@ -72,5 +76,207 @@
     margin-top: 12px;
     @include size(16px);
     object-fit: contain;
+  }
+}
+
+.new-title {
+  margin-bottom: 64px;
+
+  h1 {
+    font-size: 42px;
+    font-family: $title;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: $secondary;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 30px;
+    }
+
+    @include respond-to(md) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    color: $textColor;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+}
+
+.new-image-cover {
+  img {
+    width: 100%;
+  }
+}
+
+.new-detail-grid {
+  $gap: 80px;
+  display: grid;
+  grid-template-columns: calc(65% - #{$gap / 2}) calc(35% - #{$gap / 2});
+  margin-top: 80px;
+  gap: 0 $gap;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    gap: #{$gap / 2} 0;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+    gap: #{$gap / 2} 0;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: 100%;
+    gap: #{$gap / 2} 0;
+  }
+}
+
+.new-content {
+  p {
+    font-size: $textSize;
+    color: $textColor;
+    line-height: 22px;
+    margin-bottom: 57px;
+
+    @include respond-to(xs) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(sm) {
+      font-size: $textMobileSize;
+    }
+
+    @include respond-to(md) {
+      font-size: $textTabletSize;
+    }
+  }
+
+  &-section {
+    h2 {
+      color: $secondary;
+      font-size: 28px;
+      font-family: $titleDecorative;
+      font-weight: 400;
+      width: 90%;
+      line-height: 42px;
+
+      @include respond-to(xs) {
+        font-size: 23px;
+        line-height: 37px;
+      }
+  
+      @include respond-to(sm) {
+        font-size: 23px;
+        line-height: 37px;
+      }
+  
+      @include respond-to(md) {
+        font-size: 25px;
+        line-height: 39px;
+      }
+    }
+  }
+
+  figure {
+    margin-bottom: 57px;
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      color: $textColor;
+      margin-top: 16px;
+    }
+  }
+}
+
+.new-share {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: $secondary;
+  font-weight: 500;
+  margin-bottom: 24px;
+
+  img {
+    margin-right: 12px;
+    @include size(20px, 22px);
+    object-fit: contain;
+  }
+
+  ul {
+    display: inline-flex;
+    margin-bottom: 0;
+    padding-left: 40px;
+
+    li {
+      list-style: none;
+
+      img {
+        object-fit: contain;
+        @include size(34px);
+      }
+    }
+  }
+}
+
+.new-detail-related {
+  h5 {
+    color: $secondary;
+    font-size: 24px;
+    font-family: $title;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+}
+
+.new-related-list {
+  @include respond-to(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.new-related-item {
+  box-shadow: $shadow;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.new-related-text {
+  padding: 24px 34px 32px 34px;
+
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: $textColor;
   }
 }

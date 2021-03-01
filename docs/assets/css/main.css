@@ -1099,11 +1099,13 @@ dd {
   box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
   margin: 12px;
   transition: all ease-in-out 0.3s;
+  text-decoration: none;
 }
 
 .blog-card:hover {
   transition: all ease-in-out 0.3s;
   transform: translateY(-16px);
+  text-decoration: none;
 }
 
 .blog-card:hover .blog-card-date {
@@ -4962,6 +4964,12 @@ dd {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .news-container {
+    padding: 76px 80px 160px 80px;
+  }
+}
+
 .news-container .section-title {
   margin-bottom: 64px;
 }
@@ -5032,6 +5040,231 @@ dd {
   width: 16px;
   height: 16px;
   object-fit: contain;
+}
+
+.new-title {
+  margin-bottom: 64px;
+}
+
+.new-title h1 {
+  font-size: 42px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #192752;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .new-title h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .new-title h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-title h1 {
+    font-size: 38px;
+  }
+}
+
+.new-title p {
+  font-size: 18px;
+  text-align: center;
+  color: #404040;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .new-title p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .new-title p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-title p {
+    font-size: 17px;
+  }
+}
+
+.new-image-cover img {
+  width: 100%;
+}
+
+.new-detail-grid {
+  display: grid;
+  grid-template-columns: calc(65% - 40px) calc(35% - 40px);
+  margin-top: 80px;
+  gap: 0 80px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .new-detail-grid {
+    grid-template-columns: 100%;
+    gap: 40px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .new-detail-grid {
+    grid-template-columns: 100%;
+    gap: 40px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-detail-grid {
+    grid-template-columns: 100%;
+    gap: 40px 0;
+  }
+}
+
+.new-content p {
+  font-size: 20px;
+  color: #404040;
+  line-height: 22px;
+  margin-bottom: 57px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .new-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .new-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-content p {
+    font-size: 17px;
+  }
+}
+
+.new-content-section h2 {
+  color: #192752;
+  font-size: 28px;
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 400;
+  width: 90%;
+  line-height: 42px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .new-content-section h2 {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .new-content-section h2 {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-content-section h2 {
+    font-size: 25px;
+    line-height: 39px;
+  }
+}
+
+.new-content figure {
+  margin-bottom: 57px;
+}
+
+.new-content figure img {
+  width: 100%;
+}
+
+.new-content figure figcaption {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: #404040;
+  margin-top: 16px;
+}
+
+.new-share {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #192752;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.new-share img {
+  margin-right: 12px;
+  width: 20px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.new-share ul {
+  display: inline-flex;
+  margin-bottom: 0;
+  padding-left: 40px;
+}
+
+.new-share ul li {
+  list-style: none;
+}
+
+.new-share ul li img {
+  object-fit: contain;
+  width: 34px;
+  height: 34px;
+}
+
+.new-detail-related h5 {
+  color: #192752;
+  font-size: 24px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .new-related-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.new-related-item {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.new-related-item img {
+  width: 100%;
+}
+
+.new-related-text {
+  padding: 24px 34px 32px 34px;
+}
+
+.new-related-text h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #404040;
 }
 
 .contact-container {
