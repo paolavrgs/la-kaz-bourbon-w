@@ -1559,6 +1559,33 @@ dd {
   }
 }
 
+.whatsapp-floating-btn {
+  position: fixed;
+  bottom: 42px;
+  right: 33px;
+  z-index: 1;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .whatsapp-floating-btn {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .whatsapp-floating-btn {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.whatsapp-floating-btn img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
 .home-banner {
   background-repeat: no-repeat;
   background-size: cover;

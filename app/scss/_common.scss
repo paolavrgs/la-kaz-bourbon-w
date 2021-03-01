@@ -1319,3 +1319,25 @@ dd {
     }
   }
 }
+
+.whatsapp-floating-btn {
+  position: fixed;
+  bottom: 42px;
+  right: 33px;
+  z-index: 1;
+
+  @include respond-to(xs) {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  @include respond-to(sm) {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  img {
+    @include size(88px);
+    object-fit: contain;
+  }
+}
