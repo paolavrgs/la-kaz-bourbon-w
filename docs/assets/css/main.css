@@ -1399,6 +1399,164 @@ dd {
   outline: none;
 }
 
+.basic-form {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+
+.basic-form h2 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  color: #192752;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 48px;
+}
+
+.basic-form .input-group {
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.basic-form .input-group label {
+  font-style: italic;
+  color: #404040;
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.basic-form .input-group input,
+    .basic-form .input-group textarea,
+    .basic-form .input-group select {
+  width: 100%;
+  background-color: #f4f4f4;
+  border: 0;
+  border-radius: 0;
+  color: #a8a8a8;
+  padding: 12px 16px;
+}
+
+.basic-form .input-group input::placeholder,
+      .basic-form .input-group textarea::placeholder,
+      .basic-form .input-group select::placeholder {
+  color: #a8a8a8;
+}
+
+.basic-form .input-group input:hover, .basic-form .input-group input:focus, .basic-form .input-group input:active,
+      .basic-form .input-group textarea:hover,
+      .basic-form .input-group textarea:focus,
+      .basic-form .input-group textarea:active,
+      .basic-form .input-group select:hover,
+      .basic-form .input-group select:focus,
+      .basic-form .input-group select:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.basic-form .input-group textarea {
+  margin-bottom: 24px;
+  height: 175px;
+  resize: none;
+}
+
+.basic-form .input-group input[type="file"] {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.basic-form .input-group input[type="file"] + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: none;
+  width: 100%;
+  background-color: #f4f4f4;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .basic-form .input-group input[type="file"] + label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .basic-form .input-group input[type="file"] + label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .basic-form .input-group input[type="file"] + label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.basic-form .input-group input[type="file"] + label .filename {
+  color: #a8a8a8;
+  font-weight: 600;
+  font-size: 16px;
+  font-style: normal;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .basic-form .input-group input[type="file"] + label .filename {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .basic-form .input-group input[type="file"] + label .filename {
+    font-size: 15px;
+  }
+}
+
+.basic-form .input-group input[type="file"] + label span {
+  color: #75b9d7;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.basic-form .input-group input[type="file"] + label img {
+  width: 14px;
+  height: 14px;
+  margin-right: 24px;
+  margin-left: 8px;
+}
+
+.basic-form .btn-custom {
+  height: 56px;
+  width: 252px;
+  padding: 0;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .basic-form .btn-custom {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .basic-form .btn-custom {
+    width: 100%;
+  }
+}
+
 .home-banner {
   background-repeat: no-repeat;
   background-size: cover;
@@ -4932,71 +5090,7 @@ dd {
 }
 
 .contact-form {
-  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
   padding: 48px 24px;
-  text-align: center;
-}
-
-.contact-form h2 {
-  text-align: center;
-  font-family: "Cinzel", serif;
-  color: #192752;
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 48px;
-}
-
-.contact-form .input-group {
-  flex-direction: column;
-  margin-bottom: 24px;
-}
-
-.contact-form .input-group label {
-  font-style: italic;
-  color: #404040;
-  font-size: 16px;
-  margin-bottom: 8px;
-  text-align: left;
-}
-
-.contact-form .input-group input,
-    .contact-form .input-group textarea {
-  width: 100%;
-  background-color: #f4f4f4;
-  border: 0;
-  border-radius: 0;
-  color: #a8a8a8;
-  padding: 12px 16px;
-}
-
-.contact-form .input-group input::placeholder,
-      .contact-form .input-group textarea::placeholder {
-  color: #a8a8a8;
-}
-
-.contact-form .input-group textarea {
-  margin-bottom: 24px;
-  height: 175px;
-  resize: none;
-}
-
-.contact-form .btn-custom {
-  height: 56px;
-  width: 252px;
-  padding: 15px;
-}
-
-@media (min-width: 0px) and (max-width: 575px) {
-  .contact-form .btn-custom {
-    width: 100%;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-  .contact-form .btn-custom {
-    width: 100%;
-  }
 }
 
 .contact-map iframe {
@@ -5111,6 +5205,409 @@ dd {
   .contact-info ul li span {
     font-size: 20px;
   }
+}
+
+.reviews-container {
+  padding: 64px 132px 88px 132px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .reviews-container {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .reviews-container {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .reviews-container {
+    padding: 64px 40px 88px 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .reviews-container {
+    padding: 64px 80px 88px 80px;
+  }
+}
+
+.reviews-container p {
+  font-size: 20px;
+  color: #404040;
+  text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .reviews-container p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .reviews-container p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .reviews-container p {
+    font-size: 17px;
+  }
+}
+
+.reviews-list {
+  margin-top: 88px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .reviews-list {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .reviews-list {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .reviews-list {
+    margin-top: 40px;
+  }
+}
+
+.review-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(35% - 12px) calc(65% - 12px);
+  gap: 0 24px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-item {
+    grid-template-columns: 100%;
+    gap: 24px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-item {
+    grid-template-columns: 100%;
+    gap: 24px 0;
+  }
+}
+
+.review-item.without-image {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.review-item img {
+  width: 100%;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .review-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.review-item-content {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-item-content {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-item-content {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-item-content {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .review-item-content {
+    padding: 48px 32px;
+  }
+}
+
+.review-item-content p {
+  color: #404040;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 22px;
+  max-height: 70px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-item-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-item-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-item-content p {
+    font-size: 17px;
+  }
+}
+
+.review-content-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-header {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-header {
+    flex-direction: column;
+  }
+}
+
+.review-content-header h2 {
+  font-size: 24px;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #192752;
+  margin-bottom: 8px;
+}
+
+.review-content-header span {
+  font-size: 20px;
+  color: #a8a8a8;
+  font-weight: 500;
+  font-style: italic;
+  text-align: right;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-header span {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-header span {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-content-header span {
+    font-size: 17px;
+  }
+}
+
+.review-content-date span {
+  color: rgba(64, 64, 64, 0.5);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-date span {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-date span {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-content-date span {
+    font-size: 17px;
+  }
+}
+
+.review-content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+}
+
+.review-content-ranking {
+  display: flex;
+  align-items: center;
+}
+
+.review-content-ranking .ranking-number {
+  border: 2px solid #75b9d7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-right: 24px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-ranking .ranking-number {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-ranking .ranking-number {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-content-ranking .ranking-number {
+    margin-right: 12px;
+  }
+}
+
+.review-content-ranking .ranking-number span {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 700;
+  font-size: 36px;
+  color: #75b9d7;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.review-content-ranking h3 {
+  font-size: 20px;
+  color: #75b9d7;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-content-ranking h3 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-content-ranking h3 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-content-ranking h3 {
+    font-size: 17px;
+  }
+}
+
+.review-villa-name h3 {
+  font-size: 36px;
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 400;
+  text-align: right;
+  color: #75b9d7;
+  margin-bottom: 0;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .review-villa-name h3 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-villa-name h3 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-villa-name h3 {
+    font-size: 28px;
+  }
+}
+
+.review-villa-name.green h3 {
+  color: #bdd17c;
+}
+
+.review-villa-name.orange h3 {
+  color: #f29985;
+}
+
+.reviews-form {
+  margin-top: 144px;
+}
+
+.reviews-form .basic-form {
+  padding: 24px 24px 48px 24px;
+}
+
+.reviews-form .btn-custom {
+  margin-top: 24px;
 }
 
 .page-header {

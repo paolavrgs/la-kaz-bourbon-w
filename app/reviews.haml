@@ -1,0 +1,168 @@
+!!!
+:ruby
+  def render(partial, args = {})
+    engine = Haml::Engine.new(File.read(partial))
+    engine.render(Object.new, args)
+  end
+%html{ lang: "en" }
+  %head
+    %title Reviews | La Kaz Bourbon
+    = render('app/partials/_head.haml')
+  %body
+    = render('app/partials/_widget-scroll.haml')
+    = render('app/partials/_navbar.haml')
+    .page-header{ style: "background-image: url('assets/img/reviews/page_header.jpg');" }
+      %h1 Reviews
+    .reviews-container
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ligula nisl. Integer leo odio, fermentum et consequat quis, ullamcorper sit amet arcu. Aliquam vestibulum efficitur ante, sit amet pharetra eros hendrerit facilisis. Phasellus sit amet nisl in massa eleifend rhoncus. Donec a porttitor diam, eget blandit felis.
+      .reviews-list
+        .review-item
+          .review-item-img
+            %img{ src: "assets/img/reviews/review_1.jpg", alt: "The Best experience" }
+          .review-item-content
+            .review-content-header
+              %div
+                %h2 The Best Experience
+                %span by Danny Johnson from United States
+              .review-content-date
+                %span September
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ligula nisl. Integer leo odio, fermentum et consequat quis, ullamcorper sit amet arcu. Aliquam vestibulum efficitur ante.
+            .review-content-footer
+              .review-content-ranking
+                .ranking-number
+                  %span
+                    10
+                %h3 Perfect
+              .review-villa-name.green
+                %h3 la Garconniere
+        .review-item
+          .review-item-img
+            %img{ src: "assets/img/reviews/review_2.jpg", alt: "j’ai eu un grand moment" }
+          .review-item-content
+            .review-content-header
+              %div
+                %h2 j’ai eu un grand moment
+                %span by Antoinette Provost from France
+              .review-content-date
+                %span April
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ligula nisl. Integer leo odio, fermentum et consequat quis, ullamcorper sit amet arcu. Aliquam vestibulum efficitur ante.
+            .review-content-footer
+              .review-content-ranking
+                .ranking-number
+                  %span
+                    9
+                %h3 Fantastic
+              .review-villa-name
+                %h3 Cap Homad
+        .review-item
+          .review-item-img
+            %img{ src: "assets/img/reviews/review_3.jpg", alt: "A really clean villa" }
+          .review-item-content
+            .review-content-header
+              %div
+                %h2 A really clean villa
+                %span by Lars Granqvist from Denmark
+              .review-content-date
+                %span October
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ligula nisl. Integer leo odio, fermentum et consequat quis, ullamcorper sit amet arcu. Aliquam vestibulum efficitur ante.
+            .review-content-footer
+              .review-content-ranking
+                .ranking-number
+                  %span
+                    7
+                %h3 Great
+              .review-villa-name.orange
+                %h3 Des Aigrettes
+        .review-item.without-image
+          .review-item-content
+            .review-content-header
+              %div
+                %h2 A beautiful island
+                %span by Andrea Immobile from Italy
+              .review-content-date
+                %span June
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis ligula nisl. Integer leo odio, fermentum et consequat quis, ullamcorper sit amet arcu. Aliquam vestibulum efficitur ante.
+            .review-content-footer
+              .review-content-ranking
+                .ranking-number
+                  %span
+                    10
+                %h3 Amazing
+              .review-villa-name
+                %h3 Cap Homad
+      .reviews-form
+        .section-title
+          %h1 Write a Review
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo odio. Vivamus euismod vulputate metus in mattis. Fusce eget pretium nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        .basic-form
+          .row
+            .col-lg-6
+              .input-group
+                %label What is your full name?
+                %input.form-control{ placeholder: "Full Name", type: "text" }
+            .col-lg-6
+              .input-group
+                %label What is your email address?*
+                %input.form-control{ placeholder: "Email", type: "email" }
+            .col-lg-6
+              .input-group
+                %label Where did you visit us from?
+                %select.form-select
+                  %option{selected: "selected", disabled: true} Select a country…
+                  %option France
+                  %option Germany
+                  %option USA
+            .col-lg-6
+              .input-group
+                %label When did you stayed with us?
+                %select.form-select
+                  %option{selected: "selected", disabled: true} Select a month
+                  %option{ value: "january" } January
+                  %option{ value: "february" } February
+                  %option{ value: "march" } March
+                  %option{ value: "april" } April
+                  %option{ value: "may" } May
+                  %option{ value: "june" } June
+                  %option{ value: "july" } July
+                  %option{ value: "august" } August
+                  %option{ value: "september" } September
+                  %option{ value: "october" } October
+                  %option{ value: "november" } November
+                  %option{ value: "december" } December
+            .col-lg-6
+              .input-group
+                %label Write a headline for your testimonial
+                %input.form-control{ placeholder: "Headline", type: "text" }
+            .col-lg-6
+              .input-group
+                %label In what villa did you stay?*
+                %select.form-select
+                  %option{selected: "selected", disabled: true} Select a villa...
+                  %option{ value: "la-garconniere" } La Garconniere
+                  %option{ value: "cap-homad" } Cap Homad
+                  %option{ value: "des-aigrettes" } Des Aigrettes
+            .col-lg-12
+              .input-group
+                %label What do you think about us?*
+                %textarea.form-control{ placeholder: "Testimonial" }
+            .col-lg-12
+              .input-group
+                %label Give us a score*
+                %input.form-control{ placeholder: "Write a score (only numbers)", type: "number" }
+            .col-lg-12
+              .input-group
+                %label Would you like to include photos?
+                %input.form-control{ id: "fileInput", type: "file" }
+                %label
+                  %span
+                    Upload photos
+                  %img{ src: "assets/img/icons/upload.svg" }
+                  .filename No file chosen (jpg, png)
+          %input.btn.btn-custom.inverse{ type: "submit", value: "Add testimonial" }
+    = render('app/partials/_footer.haml')
+    = render('app/partials/_scripts.haml')
+    :javascript
+       $('input[type="file"]').change(function(e){
+        const fileName = e.target.files[0].name;
+        $('.filename').text(fileName)
+      });
