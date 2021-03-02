@@ -102,7 +102,9 @@
                 %input.form-control{ placeholder: "Full Name", type: "text" }
             .col-lg-6
               .input-group
-                %label What is your email address?*
+                %label
+                  What is your email address?
+                  %span *
                 %input.form-control{ placeholder: "Email", type: "email" }
             .col-lg-6
               .input-group
@@ -135,7 +137,9 @@
                 %input.form-control{ placeholder: "Headline", type: "text" }
             .col-lg-6
               .input-group
-                %label In what villa did you stay?*
+                %label
+                  In what villa did you stay?
+                  %span *
                 %select.form-select
                   %option{selected: "selected", disabled: true} Select a villa...
                   %option{ value: "la-garconniere" } La Garconniere
@@ -143,11 +147,15 @@
                   %option{ value: "des-aigrettes" } Des Aigrettes
             .col-lg-12
               .input-group
-                %label What do you think about us?*
+                %label
+                  What do you think about us?
+                  %span *
                 %textarea.form-control{ placeholder: "Testimonial" }
             .col-lg-12
               .input-group
-                %label Give us a score*
+                %label
+                  Give us a score
+                  %span *
                 %input.form-control{ placeholder: "Write a score (only numbers)", type: "number" }
             .col-lg-12
               .input-group

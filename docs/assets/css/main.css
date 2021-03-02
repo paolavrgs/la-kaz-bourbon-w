@@ -1430,6 +1430,10 @@ dd {
   text-align: left;
 }
 
+.basic-form .input-group label span {
+  color: #f29985;
+}
+
 .basic-form .input-group input,
     .basic-form .input-group textarea,
     .basic-form .input-group select {
@@ -1456,6 +1460,11 @@ dd {
       .basic-form .input-group select:active {
   outline: none;
   box-shadow: none;
+}
+
+.basic-form .input-group select {
+  background-image: url("../img/icons/arrow_gray.svg");
+  background-size: 12px 6px;
 }
 
 .basic-form .input-group textarea {

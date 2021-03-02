@@ -1208,6 +1208,10 @@ dd {
       font-size: 16px;
       margin-bottom: 8px;
       text-align: left;
+
+      span {
+        color: $orange;
+      }
     }
 
     input,
@@ -1230,6 +1234,11 @@ dd {
         outline: none;
         box-shadow: none;
       }
+    }
+
+    select {
+      background-image: url("../img/icons/arrow_gray.svg");
+      background-size: 12px 6px;
     }
 
     textarea {
