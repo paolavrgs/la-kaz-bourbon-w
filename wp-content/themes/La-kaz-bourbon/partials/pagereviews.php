@@ -1,2 +1,2 @@
-<?php get_template_part( 'reviews/banner' ); ?>
-<?php get_template_part( 'reviews/content' ); ?>
+<?php get_template_part( 'partials/reviews/banner' ); ?>
+<?php get_template_part( 'partials/reviews/content' ); ?>

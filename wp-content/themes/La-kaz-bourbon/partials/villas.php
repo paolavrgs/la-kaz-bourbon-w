@@ -1,5 +1,5 @@
-<?php get_template_part( 'villas/banner' ); ?>
-<?php get_template_part( 'villas/filter' ); ?>
+<?php get_template_part( 'partials/villas/banner' ); ?>
+<?php get_template_part( 'partials/villas/filter' ); ?>
 
 <script>
   $(document).ready(function() {

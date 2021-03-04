@@ -1,1 +1,1 @@
-<?php get_template_part( 'contact/contact-form' ); ?>
+<?php get_template_part( 'partials/contact/contact-form' ); ?>
