@@ -5278,6 +5278,12 @@ dd {
   margin-bottom: 24px;
 }
 
+.new-share .heateor_sss_sharing_container{
+  display: flex;
+}
+.new-share .heateor_sss_sharing_title{
+  margin-right: 1rem;
+}
 .new-share img {
   margin-right: 12px;
   width: 20px;

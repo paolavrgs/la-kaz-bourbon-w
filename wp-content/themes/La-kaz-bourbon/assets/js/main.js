@@ -93,3 +93,5 @@ $(".pause-video").on("click", () => {
 //     $("#bannerVideo").prop("mute", true)
 //   }
 // })
+
+

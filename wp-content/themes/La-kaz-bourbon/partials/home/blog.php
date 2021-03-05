@@ -1,7 +1,7 @@
 <!-- Blog -->
 <div class="home-blog">
   <div class="section-title">
-    <h1>Latest News</h1>
+    <h1><?php _e('Latest News', 'apk'); ?></h1>
   </div>
   <div class="blog-grid">
     <?php $args = array('post_type' => 'post'); 

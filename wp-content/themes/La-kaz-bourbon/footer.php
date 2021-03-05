@@ -44,8 +44,8 @@
     </div>
     <div class='copyright'>
       <span>
-        Copyright © 2020 La Kaz Bourbon
-        <a href=''>Made with ♥ by Branch</a>
+        <?php _e('Copyright © 2020 La Kaz Bourbon', 'apk'); ?>        
+        <a href=''><?php _e('Made with ♥ by Branch', 'apk'); ?></a>
       </span>
     </div>
   </footer>

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: La kaz bourbon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-02 18:46+0000\n"
-"PO-Revision-Date: 2021-03-03 21:50+0000\n"
+"PO-Revision-Date: 2021-03-04 16:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -22,6 +22,10 @@ msgstr "08:00 TOT 18:00 (MET)"
 #. Author of the theme
 msgid "Anonymous"
 msgstr ""
+
+#: footer.php:47
+msgid "Copyright © 2020 La Kaz Bourbon"
+msgstr "Copyright © 2020 La Kaz Bourbon"
 
 #. Description of the theme
 msgid "Desarrollado por:  Gladibeth Franco y Paola Vargas"
@@ -47,10 +51,22 @@ msgstr ""
 msgid "La Réunion, France"
 msgstr "La Réunion, Frankrijk"
 
+#: partials/home/blog.php:4
+msgid "Latest News"
+msgstr "Laatste nieuws"
+
+#: footer.php:48
+msgid "Made with ♥ by Branch"
+msgstr "Gemaakt met ♥ door Branch"
+
+#: partials/home/banner.php:32
+msgid "Meet La Reunion"
+msgstr "Maak kennis met La Reunion"
+
 #: functions.php:19
 msgid "Sidebar principal"
 msgstr ""
 
-#: partials/home/banner-villas.php:4
+#: partials/home/banner-villas.php:5
 msgid "The island adventure of your dreams"
 msgstr "Het eilandavontuur van uw dromen"
