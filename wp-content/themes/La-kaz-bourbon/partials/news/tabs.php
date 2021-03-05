@@ -77,9 +77,7 @@
       <div aria-labelledby="id-<?php echo $post_category->term_id;?>-tab" class="tab-pane <?php if($tax->name == $post_category->name ){ echo 'show active';} ?>" id="#id-<?php echo $post_category->term_id;?>" role="tabpanel">
         <div class="blog-grid">
           <?php $args = array('post_type' => 'post'); 
-          $counterPostGeneral = 1;
-          $post_date = get_the_date( ' M j' ); 
-          ?>
+          $counterPostGeneral = 1;?>
           <?php $loop = new WP_Query($args); ?>
           <?php while ($loop->have_posts()) : $loop->the_post(); ?>
             <?php if($counterPostGeneral <= 1): ?>
@@ -100,7 +98,7 @@
                 <div class="blog-card-img">
                   <img alt="<?php the_title(); ?>" src="<?php echo get_the_post_thumbnail_url(); ?>">
                   <div class="blog-card-date">
-                    <span><?php echo  $post_date;?></span>
+                    <span><?php echo  get_the_date( ' M j' ); ?></span>
                   </div>
                 </div>
                 <div class="blog-card-text">

@@ -133,3 +133,61 @@ function banner_view_taxonomy() {
 	register_taxonomy( 'banner_view', array( 'banner' ), $args );
 }
 add_action( 'init', 'banner_view_taxonomy', 0 );
+
+
+
+// Register Custom Post Type
+function ExtraServices() {
+
+	$labels = array(
+		'name'                  => _x( 'Extra Services', 'Extra Services General Name', 'La kaz bourbon' ),
+		'singular_name'         => _x( 'Extra Services', 'Extra Services Singular Name', 'La kaz bourbon' ),
+		'menu_name'             => __( 'Extra Services', 'La kaz bourbon' ),
+		'name_admin_bar'        => __( 'Extra Services', 'La kaz bourbon' ),
+		'archives'              => __( 'Item Archives', 'La kaz bourbon' ),
+		'attributes'            => __( 'Item Attributes', 'La kaz bourbon' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'La kaz bourbon' ),
+		'all_items'             => __( 'All Items', 'La kaz bourbon' ),
+		'add_new_item'          => __( 'Add New Item', 'La kaz bourbon' ),
+		'add_new'               => __( 'Add New', 'La kaz bourbon' ),
+		'new_item'              => __( 'New Item', 'La kaz bourbon' ),
+		'edit_item'             => __( 'Edit Item', 'La kaz bourbon' ),
+		'update_item'           => __( 'Update Item', 'La kaz bourbon' ),
+		'view_item'             => __( 'View Item', 'La kaz bourbon' ),
+		'view_items'            => __( 'View Items', 'La kaz bourbon' ),
+		'search_items'          => __( 'Search Item', 'La kaz bourbon' ),
+		'not_found'             => __( 'Not found', 'La kaz bourbon' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'La kaz bourbon' ),
+		'featured_image'        => __( 'Featured Image', 'La kaz bourbon' ),
+		'set_featured_image'    => __( 'Set featured image', 'La kaz bourbon' ),
+		'remove_featured_image' => __( 'Remove featured image', 'La kaz bourbon' ),
+		'use_featured_image'    => __( 'Use as featured image', 'La kaz bourbon' ),
+		'insert_into_item'      => __( 'Insert into item', 'La kaz bourbon' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'La kaz bourbon' ),
+		'items_list'            => __( 'Items list', 'La kaz bourbon' ),
+		'items_list_navigation' => __( 'Items list navigation', 'La kaz bourbon' ),
+		'filter_items_list'     => __( 'Filter items list', 'La kaz bourbon' ),
+	);
+	$args = array(
+		'label'                 => __( 'Extra Services', 'La kaz bourbon' ),
+		'description'           => __( 'Extra Services Description', 'La kaz bourbon' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+    'menu_icon'             => 'dashicons-format-gallery',
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'ExtraServices', $args );
+
+}
+add_action( 'init', 'ExtraServices', 0 );
