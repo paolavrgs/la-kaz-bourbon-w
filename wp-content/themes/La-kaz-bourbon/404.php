@@ -1,13 +1,13 @@
 <?php get_header(); ?>
   <section class="not-found">
     <div class="not-found-message">
-      <h2>Oops!</h2>
+      <!--<h2>Oops!</h2>-->
     </div>
     <div class="not-found-code">
-      <h1>404</h1>
+      <h1><?php _e('Error 404', 'apk'); ?></h1>
     </div>
     <div class="not-found-message">
-      <h3>The page was not found</h3>
+      <h3><?php _e(' Page was not found', 'apk'); ?></h3>
     </div>
   </section>
   <?php get_footer(); ?>

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: La kaz bourbon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-04 16:27+0000\n"
+"POT-Creation-Date: 2021-03-05 22:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,8 +16,16 @@ msgstr ""
 "X-Loco-Version: 2.5.1; wp-5.6.2\n"
 "X-Domain: apk"
 
+#: 404.php:10
+msgid " Page was not found"
+msgstr ""
+
 #: footer.php:25
 msgid "8 AM - 6 PM (CET) "
+msgstr ""
+
+#: partials/news/tabs.php:8
+msgid "ALL NEWS"
 msgstr ""
 
 #. Author of the theme
@@ -36,6 +44,10 @@ msgstr ""
 msgid "DISCOVER LA KAZ BOURBON!"
 msgstr ""
 
+#: 404.php:7
+msgid "Error 404"
+msgstr ""
+
 #: functions.php:21
 msgid "Este es el Sidebar principal"
 msgstr ""
@@ -52,7 +64,7 @@ msgstr ""
 msgid "La Réunion, France"
 msgstr ""
 
-#: partials/home/blog.php:4
+#: partials/home/blog.php:4 partials/news/tabs.php:3
 msgid "Latest News"
 msgstr ""
 
@@ -60,7 +72,7 @@ msgstr ""
 msgid "Made with ♥ by Branch"
 msgstr ""
 
-#: partials/home/banner.php:32
+#: partials/home/banner.php:34
 msgid "Meet La Reunion"
 msgstr ""
 

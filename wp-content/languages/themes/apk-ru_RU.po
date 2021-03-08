@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: La kaz bourbon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-02 18:46+0000\n"
-"PO-Revision-Date: 2021-03-04 16:29+0000\n"
+"PO-Revision-Date: 2021-03-05 22:08+0000\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -16,9 +16,17 @@ msgstr ""
 "X-Loco-Version: 2.5.1; wp-5.6.2\n"
 "X-Domain: apk"
 
+#: 404.php:10
+msgid " Page was not found"
+msgstr "Страница не найдена"
+
 #: footer.php:25
 msgid "8 AM - 6 PM (CET) "
 msgstr "09:00 ДО 19:00 (МСК)"
+
+#: partials/news/tabs.php:8
+msgid "ALL NEWS"
+msgstr ""
 
 #. Author of the theme
 msgid "Anonymous"
@@ -36,6 +44,11 @@ msgstr ""
 msgid "DISCOVER LA KAZ BOURBON!"
 msgstr "ОТКРОЙТЕ ДЛЯ СЕБЯ ЛЯ КАС БУРБОН!"
 
+#: 404.php:7
+msgid "Error 404"
+msgstr ""
+"Ошибка 404 \n"
+
 #: functions.php:21
 msgid "Este es el Sidebar principal"
 msgstr ""
@@ -52,7 +65,7 @@ msgstr ""
 msgid "La Réunion, France"
 msgstr "Ля Реюньон, Франция"
 
-#: partials/home/blog.php:4
+#: partials/home/blog.php:4 partials/news/tabs.php:3
 msgid "Latest News"
 msgstr "Последние новости"
 
@@ -60,7 +73,7 @@ msgstr "Последние новости"
 msgid "Made with ♥ by Branch"
 msgstr "Сделано с ♥ от Branch"
 
-#: partials/home/banner.php:32
+#: partials/home/banner.php:34
 msgid "Meet La Reunion"
 msgstr ""
 "\n"
